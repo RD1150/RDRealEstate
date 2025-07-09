@@ -1,0 +1,244 @@
+/* Responsive Styles for Reena Dutta Real Estate Website */
+
+/* Mobile Styles (up to 767px) */
+@media screen and (max-width: 767px) {
+  /* Navigation */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  nav ul li {
+    margin: 8px 0;
+  }
+  
+  .header-branding {
+    flex-direction: column;
+    margin: 15px auto;
+  }
+  
+  .logo-container {
+    margin-top: 5px;
+  }
+  
+  .logo-container img {
+    max-width: 180px;
+    margin: 0 auto 12px;
+  }
+  
+  .site-title {
+    font-size: 38px;
+    text-align: center;
+    margin-top: 3px;
+  }
+  
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 48px;
+  }
+  
+  .realtor-title {
+    font-size: 18px;
+  }
+  
+  .credentials {
+    font-size: 16px;
+  }
+  
+  .association {
+    font-size: 14px;
+  }
+  
+  .tagline {
+    font-size: 18px;
+  }
+  
+  /* Section Padding */
+  section {
+    padding: 50px 0;
+  }
+  
+  /* Grid Layouts */
+  .communities-grid,
+  .testimonials-grid,
+  .sales-grid,
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Specialty Sections */
+  .specialty-grid,
+  .specialty-grid.reverse {
+    flex-direction: column;
+  }
+  
+  .specialty-content,
+  .specialty-image {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  /* About Section */
+  .about-section {
+    flex-direction: column;
+  }
+  
+  .about-image,
+  .about-content {
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  /* Form Layout */
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  /* Property Cards */
+  .property-card {
+    flex-direction: column;
+  }
+  
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-logo,
+  .footer-contact,
+  .footer-social {
+    margin-bottom: 30px;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  /* Page Titles */
+  .page-title h1 {
+    font-size: 36px;
+  }
+  
+  /* Dream Home Section */
+  .dream-home-content h2 {
+    font-size: 36px;
+  }
+}
+
+/* Tablet Styles (768px - 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Navigation */
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 60px;
+  }
+  
+  /* Grid Layouts */
+  .communities-grid,
+  .testimonials-grid,
+  .sales-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Property Search */
+  .search-container {
+    flex-direction: column;
+  }
+  
+  .search-filters,
+  .search-results {
+    width: 100%;
+  }
+  
+  /* Area Cards */
+  .area-highlights {
+    flex-direction: column;
+  }
+}
+
+/* Large Desktop Styles (1200px and up) */
+@media screen and (min-width: 1200px) {
+  .container {
+    padding: 0 40px;
+  }
+  
+  /* Hero Section */
+  .hero-content h1 {
+    font-size: 90px;
+  }
+  
+  /* Grid Layouts */
+  .communities-grid,
+  .sales-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Print Styles */
+@media print {
+  header, 
+  footer,
+  .btn,
+  .video-section,
+  .contact-section {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+  
+  a {
+    text-decoration: underline;
+    color: #000;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  p, blockquote, ul, ol, dl, table {
+    page-break-inside: avoid;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideInFromBottom {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-in {
+  animation: slideInFromBottom 0.8s ease-in-out;
+}

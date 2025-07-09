@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>San Fernando Valley - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation - New Style Based on Screenshot */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+        
+        /* New Navigation Style with Improved Alignment */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .nav-button {
+            padding: 15px 20px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #d4af37;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            min-width: 150px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+        }
+        
+        .nav-button:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .nav-button.active {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Dropdown styles with improved alignment */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown .nav-button {
+            cursor: pointer;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) ;
+            z-index: 1;
+            text-align: left;
+            left: 0;
+            top: 100%;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background-image: url('images/san_fernando_valley_aerial.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c4a030;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-content p {
+            color: #666;
+        }
+        
+        /* San Fernando Valley Cities Dropdown - Styled to match the site */
+        .sfv-dropdown-container {
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        
+        .sfv-dropdown {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .sfv-dropdown-toggle {
+            width: 100%;
+            text-align: center;
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .sfv-dropdown-toggle i {
+            margin-left: 10px;
+        }
+        
+        .sfv-dropdown-toggle:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .sfv-dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            width: 100%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 1px solid #d4af37;
+            left: 0;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .sfv-dropdown-menu .region-title {
+            color: #d4af37;
+            font-weight: bold;
+            padding: 12px 16px;
+            border-bottom: 1px solid #d4af37;
+            margin-top: 8px;
+            background-color: #121921;
+        }
+        
+        .sfv-dropdown-menu .region-title:first-child {
+            margin-top: 0;
+        }
+        
+        .sfv-dropdown-menu a {
+            color: white;
+            padding: 8px 16px 8px 24px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 0.9em;
+            background-color: #121921;
+            transition: all 0.3s;
+        }
+        
+        .sfv-dropdown-menu a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .nav-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            .sfv-dropdown {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <div class="nav-buttons">
+                <div class="nav-row">
+                    <a href="index.html" class="nav-button">HOME</a>
+                    <div class="dropdown">
+                        <a class="nav-button active">COMMUNITIES</a>
+                        <div class="dropdown-content">
+                            <a href="conejo-valley.html">CONEJO VALLEY</a>
+                            <a href="agoura-hills.html">AGOURA HILLS</a>
+                            <a href="calabasas.html">CALABASAS</a>
+                            <a href="camarillo.html">CAMARILLO</a>
+                            <a href="malibu.html">MALIBU</a>
+                            <a href="moorpark.html">MOORPARK</a>
+                            <a href="simi-valley.html">SIMI VALLEY</a>
+                            <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                            <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                            <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                            <a href="oxnard.html">OXNARD</a>
+                            <a href="ventura.html">VENTURA</a>
+                        </div>
+                    </div>
+                    <a href="market-trends.html" class="nav-button">MARKET TRENDS</a>
+                    <a href="investment-calculator.html" class="nav-button">MORTGAGE CALCULATOR</a>
+                    <a href="some-areas-of-expertise.html" class="nav-button">SOME AREAS OF EXPERTISE</a>
+                    <a href="#" class="nav-button">HOMES WE SPECIALIZE IN</a>
+                </div>
+                <div class="nav-row">
+                    <a href="about-us.html" class="nav-button">ABOUT US</a>
+                    <a href="free-home-evaluation.html" class="nav-button">FREE HOME EVALUATION</a>
+                    <a href="#" class="nav-button">MLS SEARCH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>San Fernando Valley</h1>
+            <p>A diverse and vibrant region offering a unique blend of suburban comfort and urban convenience</p>
+            <a href="#" class="cta-button">Explore San Fernando Valley Properties</a>
+        </div>
+    </section>
+
+    <!-- San Fernando Valley Cities Dropdown -->
+    <div class="sfv-dropdown-container">
+        <div class="container">
+            <div class="section-title">
+                <h2>Explore San Fernando Valley Communities</h2>
+                <p>Discover the diverse neighborhoods that make up this vibrant region of Los Angeles</p>
+            </div>
+            <div class="sfv-dropdown">
+                <div class="sfv-dropdown-toggle" id="sfvToggle">Explore San Fernando Valley Cities <i class="fas fa-chevron-down"></i></div>
+                <div class="sfv-dropdown-menu" id="sfvDropdown">
+                    <div class="region-title">Northwest San Fernando Valley</div>
+                    <a href="san-fernando-valley/chatsworth.html">Chatsworth</a>
+                    <a href="san-fernando-valley/porter-ranch.html">Porter Ranch</a>
+                    <a href="san-fernando-valley/west-hills.html">West Hills</a>
+                    <a href="san-fernando-valley/canoga-park.html">Canoga Park</a>
+                    <a href="san-fernando-valley/winnetka.html">Winnetka</a>
+                    
+                    <div class="region-title">Northeast San Fernando Valley</div>
+                    <a href="san-fernando-valley/sylmar.html">Sylmar</a>
+                    <a href="san-fernando-valley/san-fernando.html">San Fernando</a>
+                    <a href="san-fernando-valley/pacoima.html">Pacoima</a>
+                    <a href="san-fernando-valley/arleta.html">Arleta</a>
+                    <a href="san-fernando-valley/mission-hills.html">Mission Hills</a>
+                    <a href="san-fernando-valley/lake-view-terrace.html">Lake View Terrace</a>
+                    <a href="san-fernando-valley/sun-valley.html">Sun Valley</a>
+                    <a href="san-fernando-valley/shadow-hills.html">Shadow Hills</a>
+                    
+                    <div class="region-title">Southwest San Fernando Valley</div>
+                    <a href="san-fernando-valley/woodland-hills.html">Woodland Hills</a>
+                    <a href="san-fernando-valley/tarzana.html">Tarzana</a>
+                    <a href="san-fernando-valley/reseda.html">Reseda</a>
+                    <a href="san-fernando-valley/encino.html">Encino</a>
+                    
+                    <div class="region-title">Southeast San Fernando Valley</div>
+                    <a href="san-fernando-valley/sherman-oaks.html">Sherman Oaks</a>
+                    <a href="san-fernando-valley/studio-city.html">Studio City</a>
+                    <a href="san-fernando-valley/valley-village.html">Valley Village</a>
+                    <a href="san-fernando-valley/toluca-lake.html">Toluca Lake</a>
+                    <a href="san-fernando-valley/north-hollywood.html">North Hollywood</a>
+                    
+                    <div class="region-title">Central San Fernando Valley</div>
+                    <a href="san-fernando-valley/van-nuys.html">Van Nuys</a>
+                    <a href="san-fernando-valley/panorama-city.html">Panorama City</a>
+                    <a href="san-fernando-valley/north-hills.html">North Hills</a>
+                    <a href="san-fernando-valley/granada-hills.html">Granada Hills</a>
+                    <a href="san-fernando-valley/lake-balboa.html">Lake Balboa</a>
+                    <a href="san-fernando-valley/sepulveda-basin.html">Sepulveda Basin Area</a>
+                    
+                    <div class="region-title">Borderline or Adjacent Areas</div>
+                    <a href="san-fernando-valley/sunland-tujunga.html">Sunland-Tujunga</a>
+                    <a href="san-fernando-valley/burbank.html">Burbank</a>
+                    <a href="san-fernando-valley/glendale.html">Glendale</a>
+                    <a href="san-fernando-valley/hidden-hills.html">Hidden Hills</a>
+                    <a href="san-fernando-valley/calabasas.html">Calabasas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Living in San Fernando Valley</h2>
+                <p>Discover what makes the San Fernando Valley one of Los Angeles County's most diverse and vibrant regions</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-entertainment.jpg" alt="Entertainment Hub" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Entertainment Hub</h3>
+                        <p>Home to major film and television studios including Warner Bros., Universal, and Disney, making it the heart of the entertainment industry in Los Angeles.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-dining.jpg" alt="Diverse Dining" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Diverse Dining</h3>
+                        <p>From upscale restaurants in Studio City and Sherman Oaks to authentic international cuisine in Encino and Van Nuys, the Valley offers culinary experiences for every taste.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-shopping.jpg" alt="Shopping Destinations" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Shopping Destinations</h3>
+                        <p>Featuring numerous shopping centers including Sherman Oaks Galleria, Westfield Topanga, and The Village at Woodland Hills, offering retail therapy for all preferences.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-recreation.jpg" alt="Outdoor Recreation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Outdoor Recreation</h3>
+                        <p>Surrounded by the Santa Monica Mountains and featuring numerous parks, hiking trails, and recreational facilities, including the expansive Sepulveda Basin Recreation Area.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-schools.jpg" alt="Quality Education" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Quality Education</h3>
+                        <p>Home to excellent public and private schools, as well as higher education institutions including California State University Northridge and Los Angeles Valley College.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-location.jpg" alt="Strategic Location" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Strategic Location</h3>
+                        <p>Centrally located with easy access to downtown Los Angeles, Hollywood, Beverly Hills, and the beaches of Santa Monica and Malibu via multiple freeways and transit options.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods Section -->
+    <section class="features-section" style="background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Popular San Fernando Valley Neighborhoods</h2>
+                <p>Explore some of the most sought-after communities in this diverse region</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-sherman-oaks.jpg" alt="Sherman Oaks" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Sherman Oaks</h3>
+                        <p>An upscale neighborhood known for its tree-lined streets, shopping on Ventura Boulevard, and mix of luxury homes and modern apartments, offering a perfect blend of suburban comfort and urban amenities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-studio-city.jpg" alt="Studio City" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Studio City</h3>
+                        <p>A trendy area adjacent to the Hollywood Hills, featuring celebrity homes, boutique shopping, and a vibrant dining scene, while maintaining a relaxed, family-friendly atmosphere.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-encino.jpg" alt="Encino" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Encino</h3>
+                        <p>An affluent community with spacious properties, many featuring swimming pools and tennis courts, offering a luxurious lifestyle with proximity to excellent schools and recreational facilities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-woodland-hills.jpg" alt="Woodland Hills" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Woodland Hills</h3>
+                        <p>Located at the western edge of the Valley, this community offers a mix of housing options, major shopping centers, and beautiful parks, with easy access to the Santa Monica Mountains.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-toluca-lake.jpg" alt="Toluca Lake" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Toluca Lake</h3>
+                        <p>A charming, upscale neighborhood with a small-town feel, historic homes, and a walkable village center, popular with entertainment industry professionals due to its proximity to major studios.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/placeholder-granada-hills.jpg" alt="Granada Hills" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Granada Hills</h3>
+                        <p>A family-oriented community in the northern Valley featuring mid-century homes, excellent schools, and numerous parks, offering a suburban lifestyle with beautiful mountain views.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Stats Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>San Fernando Valley Real Estate Market</h2>
+                <p>Current trends and statistics for this diverse Los Angeles region</p>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <p>The San Fernando Valley real estate market remains dynamic, with varying trends across its diverse neighborhoods. From luxury estates in Encino and Sherman Oaks to more affordable options in other areas, the Valley offers housing opportunities for a wide range of buyers.</p>
+                
+                <p>Current market trends include steady appreciation in property values in premium neighborhoods, strong demand for homes in top school districts, growing interest in properties with outdoor space and home offices, increasing appeal to buyers looking for more space than available in central Los Angeles, and continued development of luxury condominiums and apartments near major employment centers.</p>
+                
+                <a href="#" class="cta-button" style="margin-top: 20px;">VIEW SAN FERNANDO VALLEY LISTINGS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with corrected styling and content changes -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #121921; padding: 60px 0 20px; color: white;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">REALTOR���</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; text-align: center;">
+                    <div style="text-align: center; height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/reena-headshot.jpg" alt="Reena Dutta" style="max-width: 120px; border-radius: 50%; border: 1px solid #d4af37;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: center; color: #d4af37;">Connect With Me</p>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/y_realty_logo_white.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="color: white;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="copyright" style="text-align: center;">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // San Fernando Valley Cities Dropdown Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sfvToggle = document.getElementById('sfvToggle');
+            const sfvDropdown = document.getElementById('sfvDropdown');
+            
+            if (sfvToggle && sfvDropdown) {
+                sfvToggle.addEventListener('click', function() {
+                    if (sfvDropdown.style.display === 'block') {
+                        sfvDropdown.style.display = 'none';
+                        sfvToggle.style.backgroundColor = '#121921';
+                        sfvToggle.style.color = 'white';
+                    } else {
+                        sfvDropdown.style.display = 'block';
+                        sfvToggle.style.backgroundColor = '#d4af37';
+                        sfvToggle.style.color = '#121921';
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(event) {
+                    if (!sfvToggle.contains(event.target) && !sfvDropdown.contains(event.target)) {
+                        sfvDropdown.style.display = 'none';
+                        sfvToggle.style.backgroundColor = '#121921';
+                        sfvToggle.style.color = 'white';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

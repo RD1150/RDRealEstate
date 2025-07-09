@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Ventura - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+        
+        /* City Banner Styles */
+        .city-banner {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .city-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .city-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .city-banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* City Navigation Styles */
+        .city-navigation {
+            background-color: #f5f5f5;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .city-nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .city-nav-item a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        
+        .city-nav-item a:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .city-nav-item a.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        /* Area Overview Section */
+        .area-overview {
+            background-color: #f9f9f9;
+        }
+        
+        .area-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .area-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Neighborhoods Section */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .neighborhood-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .neighborhood-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .neighborhood-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .neighborhood-card:hover .neighborhood-image img {
+            transform: scale(1.1);
+        }
+        
+        .neighborhood-content {
+            padding: 20px;
+        }
+        
+        .neighborhood-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 10px;
+        }
+        
+        /* Real Estate Market Section */
+        .market-section {
+            background-color: #f9f9f9;
+        }
+        
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Resources Section */
+        .resources-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .resources-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .resources-list li:before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .resources-list a {
+            color: #121921;
+            transition: color 0.3s;
+        }
+        
+        .resources-list a:hover {
+            color: #d4af37;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+            border-top: 4.5px solid #d4af37;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: #f5f5f5;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .city-banner-title {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .section-subtitle {
+                font-size: 22px;
+            }
+            
+            .stat-value {
+                font-size: 30px;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 50px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 32px; }
+        }
+        
+        @media (max-width: 768px) {
+            .city-banner-title {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
+            }
+            
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+        }
+        
+        @media (max-width: 576px) {
+            .city-banner {
+                height: 250px;
+            }
+            
+            .city-banner-title {
+                font-size: 30px;
+            }
+            
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .market-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu-items">
+                    <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                            <div class="communities-dropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="malibu.html">MALIBU</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+                    <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+                    <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- City Banner -->
+    <div class="city-banner">
+        <img src="images/ventura-banner.jpg" alt="Ventura">
+        <div class="city-banner-overlay">
+            <h1 class="city-banner-title">Ventura</h1>
+        </div>
+    </div>
+    
+    <!-- City Navigation -->
+    <div class="city-navigation">
+        <div class="container">
+            <div class="city-nav-container">
+                <div class="city-nav-item"><a href="#overview" class="active">Overview</a></div>
+                <div class="city-nav-item"><a href="#neighborhoods">Neighborhoods</a></div>
+                <div class="city-nav-item"><a href="#market">Real Estate Market</a></div>
+                <div class="city-nav-item"><a href="#resources">Resources</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Area Overview Section -->
+    <section id="overview" class="section area-overview">
+        <div class="container">
+            <h2 class="section-title">Area Overview</h2>
+            <div class="area-content">
+                <div class="area-text">
+                    <p>Ventura, officially the City of San Buenaventura, is a coastal city located in Ventura County, California. The city is situated along the Pacific Coast between Los Angeles and Santa Barbara. Ventura is known for its beautiful beaches, historic downtown, and relaxed atmosphere that combines small-town charm with modern amenities.</p>
+                    <p>Founded in 1782 when Saint Junípero Serra established Mission San Buenaventura, the city has a rich history that is still evident in its historic buildings and cultural landmarks. The mission remains an active parish and a popular tourist attraction in the downtown area.</p>
+                    <p>Ventura offers residents a high quality of life with its Mediterranean climate, outdoor recreational opportunities, vibrant arts scene, and diverse dining options. The city's economy is diverse, with healthcare, education, agriculture, manufacturing, and tourism being major sectors.</p>
+                </div>
+                <div class="area-image">
+                    <img src="images/ventura-panorama.jpg" alt="Ventura Panorama">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Neighborhoods Section -->
+    <section id="neighborhoods" class="section neighborhoods-section">
+        <div class="container">
+            <h2 class="section-title">Neighborhoods</h2>
+            <div class="neighborhoods-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/downtown-ventura.jpg" alt="Downtown & Ventura Avenue">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Downtown & Ventura Avenue</h3>
+                        <p>Downtown Ventura is the historic heart of the city, featuring a mix of Victorian-era buildings, boutique shops, restaurants, and entertainment venues. The area has undergone revitalization in recent years, attracting young professionals and artists. Ventura Avenue, extending north from downtown, offers more affordable housing options and has a diverse, working-class character.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/midtown-ventura.jpg" alt="Midtown">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Midtown</h3>
+                        <p>Midtown Ventura is a primarily residential area with a mix of housing styles from different eras. The neighborhood is known for its convenience, with Community Memorial Hospital, Ventura County Medical Center, and many medical offices located here. Midtown also features several shopping centers, restaurants, and is close to the beaches.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/pierpont-ventura.jpg" alt="Pierpont Bay">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Pierpont Bay</h3>
+                        <p>Pierpont Bay is a desirable beachfront neighborhood featuring a mix of permanent residences and vacation rentals. The area offers direct beach access, with many homes situated right on the sand. Pierpont Boulevard runs through the neighborhood, lined with beach cottages and larger homes. The Marina Park and Ventura Harbor are nearby attractions.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/east-end-ventura.jpg" alt="East End">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>East End</h3>
+                        <p>The East End of Ventura is an upscale residential area featuring larger homes, many with views of the city and ocean. This neighborhood is known for its excellent schools, including Ventura High School, and proximity to the Ventura Botanical Gardens. The area offers a suburban feel while still being close to downtown amenities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Real Estate Market Section -->
+    <section id="market" class="section market-section">
+        <div class="container">
+            <h2 class="section-title">Real Estate Market</h2>
+            <p>Ventura's real estate market offers diverse housing options, from historic downtown apartments to beachfront properties and suburban family homes. The market has seen steady appreciation over the years, driven by the city's desirable coastal location, quality of life, and limited housing supply.</p>
+            
+            <div class="market-stats">
+                <div class="stat-card">
+                    <div class="stat-value">$850K+</div>
+                    <div class="stat-label">Median Home Price</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">$550K+</div>
+                    <div class="stat-label">Median Condo Price</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Avg. Days on Market</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">97%</div>
+                    <div class="stat-label">List to Sale Price</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3 class="section-subtitle">Market Trends</h3>
+                <p>The Ventura real estate market has shown resilience and steady growth, even during economic downturns. Beachfront and ocean view properties command significant premiums, while inland neighborhoods offer more affordable options for first-time buyers and families.</p>
+                <p>Limited inventory continues to be a challenge in the Ventura market, often resulting in competitive bidding situations for well-priced properties. New development is limited by geographic constraints and strict coastal development regulations, which helps maintain property values but also contributes to affordability challenges.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="resources" class="section resources-section">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <p>Ventura offers residents and visitors a wealth of resources and amenities. Here are some useful links and information about the area:</p>
+            
+            <h3 class="section-subtitle">Local Government</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.cityofventura.ca.gov/" target="_blank">City of Ventura Official Website</a></li>
+                <li><a href="https://www.cityofventura.ca.gov/648/City-Council" target="_blank">Ventura City Council</a></li>
+                <li><a href="https://www.cityofventura.ca.gov/166/Building-Safety" target="_blank">Building & Safety Department</a></li>
+            </ul>
+            
+            <h3 class="section-subtitle">Education</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.venturausd.org/" target="_blank">Ventura Unified School District</a></li>
+                <li><a href="https://www.vcccd.edu/colleges/ventura" target="_blank">Ventura College</a></li>
+                <li><a href="https://www.csuci.edu/" target="_blank">California State University Channel Islands (nearby)</a></li>
+            </ul>
+            
+            <h3 class="section-subtitle">Recreation & Amenities</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.cityofventura.ca.gov/225/Parks-Recreation" target="_blank">Ventura Parks & Recreation</a></li>
+                <li><a href="https://visitventuraca.com/" target="_blank">Visit Ventura Tourism</a></li>
+                <li><a href="https://venturaharborvillage.com/" target="_blank">Ventura Harbor Village</a></li>
+                <li><a href="https://downtownventura.org/" target="_blank">Downtown Ventura Partners</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Footer with corrected styling and content changes -->
+    <footer style="border-top: 4.5px solid #d4af37;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <p style="font-size: 18px; margin-bottom: 12px; text-align: left;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">REALTOR</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 18px; text-align: center; margin-bottom: 15px; font-weight: bold;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border-radius: 50%;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                        <ul class="main-menu-items">
+  <li class="main-menu-item"><a href="index.html" class="main-menu-link">Home</a></li>
+  <li class="main-menu-item"><a href="about.html" class="main-menu-link">About</a></li>
+  <!-- Other menu items -->
+  <li class="main-menu-item communities-dropdown-container">
+    <button class="communities-dropdown-toggle">Communities</button>
+    <div class="communities-dropdown">
+      <a href="community1.html">Community 1</a>
+      <!-- ... -->
+    </div>
+  </li>
+  <!-- ... more items ... -->
+</ul>
+
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <img src="images/y_realty_logo_white.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <p style="font-size: 18px; margin-bottom: 12px; text-align: left;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="font-size: 18px;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="copyright">
+                <p style="color: white; font-size: 18px;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Westlake Village - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+        
+        /* City Banner Styles */
+        .city-banner {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .city-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .city-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .city-banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* City Navigation Styles */
+        .city-navigation {
+            background-color: #f5f5f5;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .city-nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .city-nav-item a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        
+        .city-nav-item a:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .city-nav-item a.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        /* Area Overview Section */
+        .area-overview {
+            background-color: #f9f9f9;
+        }
+        
+        .area-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .area-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Neighborhoods Section */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .neighborhood-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex; /* Added for consistent height */
+            flex-direction: column; /* Added for consistent height */
+        }
+        
+        .neighborhood-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .neighborhood-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .neighborhood-card:hover .neighborhood-image img {
+            transform: scale(1.1);
+        }
+        
+        .neighborhood-content {
+            padding: 20px;
+        }
+        
+        .neighborhood-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 10px;
+        }
+        
+        /* Real Estate Market Section */
+        .market-section {
+            background-color: #f9f9f9;
+        }
+        
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        /* Resources Section */
+        .resources-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .resources-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .resources-list li:before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .resources-list a {
+            color: #121921;
+            transition: color 0.3s;
+        }
+        
+        .resources-list a:hover {
+            color: #d4af37;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+            border-top: 4.5px solid #d4af37;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: #f5f5f5;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .city-banner-title {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .section-subtitle {
+                font-size: 22px;
+            }
+            
+            .stat-value {
+                font-size: 30px;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 50px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 32px; }
+        }
+        
+        @media (max-width: 768px) {
+            .city-banner-title {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
+            }
+            
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+        }
+        
+        @media (max-width: 576px) {
+            .city-banner {
+                height: 250px;
+            }
+            
+            .city-banner-title {
+                font-size: 30px;
+            }
+            
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .market-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu-items">
+                    <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                            <div class="communities-dropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="malibu.html">MALIBU</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+                    <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+                    <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- City Banner -->
+    <div class="city-banner">
+        <img src="images/westlake-village-banner.png" alt="Westlake Village">
+        <div class="city-banner-overlay">
+            <h1 class="city-banner-title">Westlake Village</h1>
+        </div>
+    </div>
+    
+    <!-- City Navigation -->
+    <div class="city-navigation">
+        <div class="container">
+            <div class="city-nav-container">
+                <div class="city-nav-item"><a href="#overview" class="active">Overview</a></div>
+                <div class="city-nav-item"><a href="#neighborhoods">Neighborhoods</a></div>
+                <div class="city-nav-item"><a href="#market">Real Estate Market</a></div>
+                <div class="city-nav-item"><a href="#resources">Resources</a></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Area Overview Section -->
+    <section id="overview" class="section area-overview">
+        <div class="container">
+            <h2 class="section-title">Area Overview</h2>
+            <div class="area-content">
+                <div class="area-text">
+                    <p>Westlake Village is a planned community that straddles the Los Angeles and Ventura county line. The eastern portion is the incorporated city of Westlake Village, located on the western edge of Los Angeles County, California. The city, located in the region known as the Conejo Valley, encompasses half of the area surrounding Westlake Lake, and small portions of Hidden Valley and North Ranch.</p>
+                    <p>The original community was known simply as "Westlake". Roughly two-thirds of it was annexed by the city of Thousand Oaks in two portions, in 1968 and 1972. In 1981, the remaining third eventually incorporated as the City of Westlake Village.</p>
+                    <p>Westlake Village is known for its affluent and secluded character, beautiful lake, and numerous amenities including shopping centers, golf courses, and hiking trails. The community is home to the headquarters of the Dole Food Company, K-Swiss, and other corporations.</p>
+                </div>
+                <div class="area-image">
+                    <img src="images/westlake-village-banner.png" alt="Westlake Village Banner">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Neighborhoods Section -->
+    <section id="neighborhoods" class="section neighborhoods-section">
+        <div class="container">
+            <h2 class="section-title">Neighborhoods</h2>
+            <div class="neighborhoods-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/north_ranch_home.png" alt="North Ranch">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>North Ranch</h3>
+                        <p>North Ranch is an exclusive gated community located in the northern part of Westlake Village. It features luxury homes, many with stunning views of the surrounding mountains and valleys. The neighborhood is adjacent to the North Ranch Country Club, which offers a championship golf course, tennis courts, and fine dining.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/westlake-island.png" alt="Westlake Island">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Westlake Island</h3>
+                        <p>Westlake Island is a private, gated island community located in the middle of Westlake Lake. This exclusive neighborhood features luxury waterfront homes with private boat docks. Residents enjoy 24-hour security, beautiful views, and direct access to the lake for boating, fishing, and other water activities.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/first_neighborhood.png" alt="First Neighborhood">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>First Neighborhood</h3>
+                        <p>First Neighborhood was the original neighborhood developed in Westlake Village. It features well-maintained homes, tree-lined streets, and a strong sense of community. The neighborhood includes parks, walking paths, a community center, and a pool. It's known for its family-friendly atmosphere and convenient location near schools and shopping.</p>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/westlake-hills.png" alt="Westlake Hills">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Westlake Hills</h3>
+                        <p>Westlake Hills is one of the most established and sought-after neighborhoods in Westlake Village, California. Known for its mature trees, spacious lots, and charming, custom-built homes, Westlake Hills offers a peaceful, suburban feel while still being close to modern amenities.
+
+This neighborhood is especially popular among families thanks to its top-rated public schools, including Westlake Hills Elementary, and its proximity to parks and hiking trails like Triunfo Canyon Park. Homes here typically range from traditional single-story ranch styles to larger two-story residences, many of which have been beautifully remodeled.
+
+Westlake Hills is also just minutes from The Promenade at Westlake, fine dining, coffee shops, and easy freeway access—making it a prime location for those seeking a balance of convenience, community, and natural beauty.
+
+Would you like this rewritten for a listing page or social media post?.</p>
+                    </div>
+                </div><div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/lake_sherwood2.jpeg" alt="Lake Sherwood">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Lake Sherwood</h3>
+                        <p>Lake Sherwood is a prestigious, guard-gated community nestled in the hills just south of Westlake Village, built around the stunning Lake Sherwood reservoir. Known for its privacy, natural beauty, and luxury lifestyle, this exclusive enclave features custom-built estates with breathtaking views of the lake, golf course, and surrounding mountains. Residents enjoy access to the renowned Lake Sherwood Country Club, home to a Jack Nicklaus-designed golf course, tennis courts, and a private clubhouse. With 24/7 security and a serene, resort-like atmosphere, Lake Sherwood offers a peaceful retreat that remains just minutes from the shops, dining, and conveniences of Westlake Village. It's a sought-after haven for those looking to blend elegance, nature, and privacy in one of Southern California’s most elite neighborhoods.</p>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/westlake-trails.png" alt="The Trails">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>The Trails</h3>
+                        <p>The Trails is known for its custom estate-style homes nestled among tree-lined streets and rolling hills. The neighborhood exudes a timeless charm, with architecture that reflects a blend of traditional and contemporary designs. Many properties feature expansive lots, offering privacy and a serene environment. The community's proximity to Westlake Lake and local amenities makes it a sought-after location for those seeking both tranquility and convenience.</p>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/westlake-southshore-hills.png" alt="South Shore Hills">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>South Shore Hills</h3>
+                        <p>Southshore Hills is a peaceful, well-established neighborhood located near the southern edge of Westlake Lake in Westlake Village, California. Known for its wide, tree-lined streets and larger lots, the area offers a blend of privacy, natural beauty, and convenience.
+
+Built mainly in the 1970s and 1980s, homes in Southshore Hills feature a variety of architectural styles—from classic ranch to updated Mediterranean—and many have been beautifully remodeled. Properties often include spacious yards, private pools, and scenic views of the Santa Monica Mountains or glimpses of the lake.
+
+Residents enjoy walking distance to Westlake Lake, top-rated schools, and destinations like The Landing and The Promenade at Westlake. Outdoor lovers appreciate the proximity to trails and parks such as Triunfo Canyon. With no HOA and a strong sense of community, Southshore Hills offers relaxed, upscale living in one of the most desirable parts of Westlake Village.</p>
+                    </div>
+                </div>
+            
+                    
+    </section>
+    
+    <!-- Real Estate Market Section -->
+    <section id="market" class="section market-section">
+        <div class="container">
+            <h2 class="section-title">Real Estate Market</h2>
+            <p>Westlake Village offers a diverse range of housing options, from luxury estates to condominiums. The real estate market in Westlake Village is known for its stability and desirability, with properties typically commanding premium prices due to the area's excellent schools, low crime rate, and high quality of life.</p>
+            
+            <div class="market-stats">
+                <div class="stat-card">
+                    <div class="stat-value">$1.5M+</div>
+                    <div class="stat-label">Median Home Price</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">$750K+</div>
+                    <div class="stat-label">Median Condo Price</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">15</div>
+                    <div class="stat-label">Avg. Days on Market</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">List to Sale Price</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 30px;">
+                <h3 class="section-subtitle">Market Trends</h3>
+                <p>The Westlake Village real estate market has shown consistent appreciation over the past decade, with particularly strong growth in recent years. Limited inventory and high demand continue to drive a competitive market, especially for properties in the most desirable neighborhoods and school districts.</p>
+                <p>Luxury properties, particularly those with lake or mountain views, command significant premiums. The market for condominiums and townhomes remains strong, particularly among first-time buyers and those looking to downsize.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Resources Section -->
+    <section id="resources" class="section resources-section">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <p>Westlake Village offers residents and visitors a wealth of resources and amenities. Here are some useful links and information about the area:</p>
+            
+            <h3 class="section-subtitle">Local Government</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.wlv.org/" target="_blank">City of Westlake Village Official Website</a></li>
+                <li><a href="https://www.wlv.org/175/City-Council" target="_blank">Westlake Village City Council</a></li>
+                <li><a href="https://www.wlv.org/224/Building-Safety" target="_blank">Building & Safety Department</a></li>
+            </ul>
+            
+            <h3 class="section-subtitle">Education</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.lvusd.org/" target="_blank">Las Virgenes Unified School District</a></li>
+                <li><a href="https://www.westhillsacademy.com/" target="_blank">West Hills Academy (Private)</a></li>
+                <li><a href="https://www.oakschristian.org/" target="_blank">Oaks Christian School (Private)</a></li>
+            </ul>
+            
+            <h3 class="section-subtitle">Recreation & Amenities</h3>
+            <ul class="resources-list">
+                <li><a href="https://www.wlv.org/210/Parks-Recreation" target="_blank">Westlake Village Parks & Recreation</a></li>
+                <li><a href="https://www.shoptheoaksmall.com/" target="_blank">The Promenade at Westlake & The Lakes Shopping Centers</a></li>
+                <li><a href="https://www.westlakeathleticclub.com/" target="_blank">Westlake Athletic Club</a></li>
+                <li><a href="https://www.northranchcc.org/" target="_blank">North Ranch Country Club</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Footer with corrected styling and content changes -->
+    <footer style="border-top: 4.5px solid #d4af37;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <p style="font-size: 18px; margin-bottom: 12px; text-align: left;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">REALTOR</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 18px; text-align: center; margin-bottom: 15px; font-weight: bold;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border-radius: 50%;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                        
+
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <p style="font-size: 18px; margin-bottom: 12px; text-align: left;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="font-size: 18px;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="copyright">
+                <p style="color: white; font-size: 18px;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

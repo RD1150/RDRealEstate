@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Oxnard - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Brand Header Styles */
+        .brand-header {
+            background-color: white;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+            width: 100%;
+            overflow: visible;
+            position: relative;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #121921;
+            margin: 0;
+            width: 100%;
+            display: block;
+            position: relative;
+            left: 0;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+        
+        /* Header and Navigation Styles */
+        header {
+            background-color: #121921;
+            color: white;
+            padding: 15px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo img {
+            height: 60px;
+            width: auto;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 10px 5px;
+            display: block;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #d4af37;
+        }
+        
+        /* Dropdown Menu Styles */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 10px 15px;
+            border: 1px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .communities-dropdown-toggle:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 1px solid #d4af37;
+        }
+        
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background-color: transparent;
+            border: 1px solid #d4af37;
+            border-radius: 4px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        
+        /* City Banner Styles */
+        .city-banner {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .city-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .city-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .city-banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* City Navigation Styles */
+        .city-navigation {
+            background-color: #f5f5f5;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .city-nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .city-nav-item a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        
+        .city-nav-item a:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .city-nav-item a.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        /* Area Section Styles */
+        .area-section {
+            padding: 60px 0;
+        }
+        
+        .area-intro {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .area-intro h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        .area-intro p {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 2.0;
+        }
+        
+        .area-image-full {
+            margin-bottom: 50px;
+        }
+        
+        .area-image-full img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .area-content {
+            margin-bottom: 50px;
+        }
+        
+        .area-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+        }
+        
+        .area-content p {
+            margin-bottom: 30px;
+            line-height: 2.0;
+        }
+        
+        .area-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .highlight {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .highlight h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        .highlight ul {
+            margin-left: 20px;
+        }
+        
+        .highlight ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        /* Neighborhood Styles */
+        .area-neighborhoods {
+            margin-bottom: 50px;
+        }
+        
+        .area-neighborhoods h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .neighborhood {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .neighborhood-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .neighborhood-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .neighborhood-content {
+            flex: 2;
+            padding: 30px;
+            min-width: 300px;
+        }
+        
+        .neighborhood-content h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        .neighborhood-content p {
+            margin-bottom: 20px;
+            line-height: 2.0;
+        }
+        
+        /* Market Styles */
+        .area-market {
+            margin-bottom: 50px;
+            background-color: #f9f9f9;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .area-market h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .area-market p {
+            margin-bottom: 30px;
+            line-height: 2.0;
+        }
+        
+        .area-market ul {
+            margin-left: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .area-market ul li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #121921;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #121921;
+            color: white;
+        }
+        
+        .area-market .btn {
+            display: block;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        /* Resources Styles */
+        .area-resources {
+            margin-bottom: 50px;
+        }
+        
+        .area-resources h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .resource-card {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .resource-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .resource-card ul {
+            margin-left: 20px;
+        }
+        
+        .resource-card ul li {
+            margin-bottom: 15px;
+        }
+        
+        .resource-card ul li a {
+            color: #121921;
+            transition: color 0.3s;
+        }
+        
+        .resource-card ul li a:hover {
+            color: #d4af37;
+        }
+        
+        /* Footer Styles */
+        footer {
+            background-color: #121921;
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: #d4af37; /* Gold color to match header */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Text shadow for better contrast */
+        }
+        
+        .footer-logo p {
+            margin-bottom: 5px;
+            color: rgba(255, 255, 255, 0.8); /* Lighter color for better visibility */
+        }
+        
+        .footer-contact h3, .footer-social h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9); /* Lighter color for better visibility */
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .footer-social .btn {
+            margin-top: 20px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6); /* Lighter color for better visibility */
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .area-highlights {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .neighborhood {
+                flex-direction: column;
+            }
+            
+            .neighborhood-image {
+                min-height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .city-banner-title {
+                font-size: 40px;
+            }
+            
+            .area-intro h2, .area-content h3, .area-neighborhoods h3, .area-market h3, .area-resources h3 {
+                font-size: 30px;
+            }
+            
+            .neighborhood-content h4, .highlight h4, .resource-card h4 {
+                font-size: 22px;
+            }
+            
+            .area-highlights {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: #121921;
+                padding: 20px;
+                z-index: 100;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+                width: 100%;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .communities-dropdown-container {
+                width: 100%;
+            }
+            
+            .communities-dropdown-toggle {
+                width: 100%;
+                text-align: left;
+            }
+            
+            .communities-dropdown {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                margin-top: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .city-banner-title {
+                font-size: 32px;
+            }
+            
+            .area-intro h2, .area-content h3, .area-neighborhoods h3, .area-market h3, .area-resources h3 {
+                font-size: 26px;
+            }
+            
+            .neighborhood-content h4, .highlight h4, .resource-card h4 {
+                font-size: 20px;
+            }
+            
+            .highlight, .resource-card, .area-market, .neighborhood-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo-white.png" alt="Reena Dutta Real Estate" width="100"></a>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="mainMenu">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="some-areas-of-expertise.html">AREAS OF EXPERTISE</a></li>
+                    <li><a href="homes-we-specialize.html">HOMES WE SPECIALIZE IN</a></li>
+                    <li><a href="about-us.html">ABOUT US</a></li>
+                    <li><a href="free-home-evaluation.html">FREE HOME EVALUATION</a></li>
+                    <li><a href="mls-search.html">MLS SEARCH</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle" id="communitiesToggle">COMMUNITIES</button>
+                            <div class="communities-dropdown" id="communitiesDropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html" class="active">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- City Banner -->
+    <div class="city-banner">
+        <img src="images/OxnardShore.png" alt="Oxnard Shore">
+        <div class="city-banner-overlay">
+            <h1 class="city-banner-title">Oxnard</h1>
+        </div>
+    </div>
+
+    <!-- City Navigation -->
+    <div class="city-navigation">
+        <div class="container">
+            <div class="city-nav-container">
+                <div class="city-nav-item"><a href="conejo-valley.html">Conejo Valley</a></div>
+                <div class="city-nav-item"><a href="agoura-hills.html">Agoura Hills</a></div>
+                <div class="city-nav-item"><a href="calabasas.html">Calabasas</a></div>
+                <div class="city-nav-item"><a href="camarillo.html">Camarillo</a></div>
+                <div class="city-nav-item"><a href="moorpark.html">Moorpark</a></div>
+                <div class="city-nav-item"><a href="simi-valley.html">Simi Valley</a></div>
+                <div class="city-nav-item"><a href="westlake-village.html">Westlake Village</a></div>
+                <div class="city-nav-item"><a href="san-fernando-valley.html">San Fernando Valley</a></div>
+                <div class="city-nav-item"><a href="oxnard.html" class="active">Oxnard</a></div>
+                <div class="city-nav-item"><a href="ventura.html">Ventura</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Area Content -->
+    <section class="area-section">
+        <div class="container">
+            <div class="area-intro">
+                <h2>Welcome to Oxnard</h2>
+                <p>Oxnard offers a unique coastal lifestyle with beautiful beaches, a rich agricultural heritage, and diverse neighborhoods. Known for its mild climate, vibrant cultural scene, and strong sense of community, this charming coastal city provides an exceptional quality of life along the stunning California coast.</p>
+            </div>
+            
+            <div class="area-image-full">
+                <img src="images/oxnard.png" alt="Oxnard">
+            </div>
+            
+            <div class="area-content">
+                <h3>About Oxnard</h3>
+                <p>Located in Ventura County along the California coast, Oxnard is the largest city in the county and offers residents a perfect blend of urban amenities and coastal charm. The city is known for its beautiful beaches, including Oxnard Beach Park, Mandalay State Beach, and Silver Strand Beach, providing residents with abundant opportunities for surfing, swimming, and beachcombing.</p>
+                
+                <p>Oxnard's rich agricultural heritage is evident in the vast strawberry fields and farmland that surround the city, earning it the nickname "Strawberry Capital of California." The city hosts the annual California Strawberry Festival, celebrating this important local crop and drawing visitors from throughout the region.</p>
+                
+                <p>The city features a diverse range of housing options, from beachfront properties and marina-adjacent homes to family-friendly neighborhoods with tree-lined streets. Residents enjoy a variety of shopping and dining options at The Collection at RiverPark, historic downtown Oxnard, and Channel Islands Harbor, as well as cultural attractions like the Carnegie Art Museum and the Murphy Auto Museum.</p>
+                
+                <div class="area-highlights">
+                    <div class="highlight">
+                        <h4>Notable Communities</h4>
+                        <ul>
+                            <li>Channel Islands</li>
+                            <li>Oxnard Shores</li>
+                            <li>River Park</li>
+                            <li>Mandalay Bay</li>
+                            <li>Silver Strand</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight">
+                        <h4>Lifestyle</h4>
+                        <ul>
+                            <li>Channel Islands Harbor</li>
+                            <li>Oxnard Beach Park</li>
+                            <li>The Collection at RiverPark</li>
+                            <li>Carnegie Art Museum</li>
+                            <li>Heritage Square</li>
+                            <li>Numerous coastal activities</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="highlight">
+                        <h4>Housing</h4>
+                        <ul>
+                            <li>Beachfront properties</li>
+                            <li>Harbor and marina homes</li>
+                            <li>Family-friendly neighborhoods</li>
+                            <li>Master-planned communities</li>
+                            <li>Custom-built residences</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="area-neighborhoods">
+                <h3>Featured Neighborhoods</h3>
+                
+                <div class="neighborhood">
+                    <div class="neighborhood-image">
+                        <img src="images/camarillo-channel islands university.png" alt="Channel Islands">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h4>Channel Islands</h4>
+                        <p>Channel Islands is a prestigious waterfront community built around a series of navigable channels connected to the Channel Islands Harbor. This unique neighborhood offers residents the opportunity to dock boats right at their homes and enjoy a waterfront lifestyle.</p>
+                        <p>Properties in Channel Islands typically range from $1.2 million to $3+ million, featuring homes with private docks, water views, and spacious layouts designed for indoor-outdoor living.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood">
+                    <div class="neighborhood-image">
+                        <img src="images/OxnardShore.png" alt="Oxnard Shores">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h4>Oxnard Shores</h4>
+                        <p>Oxnard Shores is one of the most sought-after beachside communities in Oxnard, featuring homes just steps from the sand. This desirable neighborhood offers a relaxed beach lifestyle with easy access to Oxnard Beach Park and Mandalay State Beach.</p>
+                        <p>Properties in Oxnard Shores typically range from $1 million to $3.5+ million, offering exceptional beachside living, ocean views, and outdoor spaces designed for enjoying the coastal climate.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood">
+                    <div class="neighborhood-image">
+                        <img src="images/oxnard-river-park.png" alt="River Park">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h4>River Park</h4>
+                        <p>River Park is a master-planned community in northeast Oxnard, offering a family-friendly atmosphere with tree-lined streets, parks, and excellent schools. This neighborhood is known for its strong sense of community and convenient access to shopping and dining at The Collection at RiverPark.</p>
+                        <p>Properties in River Park typically range from $700,000 to $1.2+ million, featuring well-maintained homes with spacious yards and access to community amenities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="area-market">
+                <h3>Oxnard Real Estate Market</h3>
+                <p>The Oxnard real estate market remains strong, with consistent demand for properties in this desirable coastal city. The combination of beautiful beaches, perfect climate, and diverse housing options continues to attract buyers seeking a high quality of life in Southern California.</p>
+                
+                <p>Current market trends include:</p>
+                <ul>
+                    <li>Premium prices for beachfront and harbor-view properties</li>
+                    <li>Strong demand for homes in family-friendly neighborhoods</li>
+                    <li>Growing interest in properties with outdoor living spaces</li>
+                    <li>Increasing appeal to buyers looking for coastal living at more accessible price points than Malibu or Santa Barbara</li>
+                    <li>Steady appreciation in property values across all neighborhoods</li>
+                </ul>
+                
+                <a href="looking-to-buy-or-sell.html" class="btn">VIEW OXNARD LISTINGS</a>
+            </div>
+            
+            <div class="area-resources">
+                <h3>Local Resources</h3>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h4>Recreation & Attractions</h4>
+                        <ul>
+                            <li><a href="https://www.channelislandsharbor.org/" target="_blank">Channel Islands Harbor</a></li>
+                            <li><a href="https://www.nps.gov/chis/" target="_blank">Channel Islands National Park</a></li>
+                            <li><a href="https://www.oxnard.org/recreation/parks/" target="_blank">Oxnard Parks & Recreation</a></li>
+                            <li><a href="https://www.thecollectionrp.com/" target="_blank">The Collection at RiverPark</a></li>
+                        </ul>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Schools & Education</h4>
+                        <ul>
+                            <li><a href="https://www.oxnardsd.org/" target="_blank">Oxnard School District</a></li>
+                            <li><a href="https://www.oxnardunion.org/" target="_blank">Oxnard Union High School District</a></li>
+                            <li><a href="https://www.vcccd.edu/colleges/oxnard" target="_blank">Oxnard College</a></li>
+                            <li><a href="https://www.csuci.edu/" target="_blank">California State University Channel Islands</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Reena Dutta</h3>
+                    <p>805-340-2583</p>
+                    <p>reena@reenaduttarealestate.com</p>
+                    <p>CalRE # 02194500</p>
+                </div>
+                <div class="footer-contact">
+                    <h3>Find me on:</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <a href="free-home-evaluation.html" class="btn">CONTACT US NOW FOR A FREE EVALUATION!</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Reena Dutta Real Estate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown Menu Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const communitiesToggle = document.getElementById('communitiesToggle');
+            const communitiesDropdown = document.getElementById('communitiesDropdown');
+            const menuToggle = document.getElementById('menuToggle');
+            const mainMenu = document.getElementById('mainMenu');
+            
+            // Desktop dropdown (hover)
+            if (communitiesToggle) {
+                communitiesToggle.addEventListener('mouseenter', function() {
+                    if (window.innerWidth > 768) {
+                        communitiesDropdown.style.display = 'block';
+                        communitiesToggle.style.backgroundColor = '#d4af37';
+                        communitiesToggle.style.color = '#121921';
+                    }
+                });
+                
+                communitiesToggle.addEventListener('mouseleave', function() {
+                    if (window.innerWidth > 768) {
+                        const isHoveringDropdown = false;
+                        
+                        if (!isHoveringDropdown) {
+                            communitiesDropdown.style.display = 'none';
+                            communitiesToggle.style.backgroundColor = '#121921';
+                            communitiesToggle.style.color = 'white';
+                        }
+                    }
+                });
+                
+                // Mobile dropdown (click)
+                communitiesToggle.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        if (communitiesDropdown.style.display === 'block') {
+                            communitiesDropdown.style.display = 'none';
+                            communitiesToggle.style.backgroundColor = '#121921';
+                            communitiesToggle.style.color = 'white';
+                        } else {
+                            communitiesDropdown.style.display = 'block';
+                            communitiesToggle.style.backgroundColor = '#d4af37';
+                            communitiesToggle.style.color = '#121921';
+                        }
+                    }
+                });
+                
+                // Handle dropdown hover
+                communitiesDropdown.addEventListener('mouseenter', function() {
+                    if (window.innerWidth > 768) {
+                        communitiesDropdown.style.display = 'block';
+                        communitiesToggle.style.backgroundColor = '#d4af37';
+                        communitiesToggle.style.color = '#121921';
+                    }
+                });
+                
+                communitiesDropdown.addEventListener('mouseleave', function() {
+                    if (window.innerWidth > 768) {
+                        communitiesDropdown.style.display = 'none';
+                        communitiesToggle.style.backgroundColor = '#121921';
+                        communitiesToggle.style.color = 'white';
+                    }
+                });
+            }
+            
+            // Mobile menu toggle
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    mainMenu.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

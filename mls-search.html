@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>MLS Search - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Header Styles */
+        .header {
+            background-color: #121921;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 100px;
+            margin: 0 auto 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .nav-button {
+            background-color: transparent;
+            border: 1px solid #d4af37;
+            color: white;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .nav-button:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .nav-button.active {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .bottom-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        /* Page Title Styles */
+        .page-title {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .page-title h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        /* Property Search Styles */
+        .property-search {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .search-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .search-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 15px;
+        }
+        
+        .search-header p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 2.0;
+        }
+        
+        .search-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .search-filters {
+            flex: 1;
+            min-width: 300px;
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1) ;
+        }
+        
+        .search-filters h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #121921;
+        }
+        
+        .filter-group {
+            margin-bottom: 20px;
+        }
+        
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .filter-group input,
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .price-range,
+        .sqft-range,
+        .year-range {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .price-range input,
+        .sqft-range input,
+        .year-range input {
+            flex: 1;
+        }
+        
+        .price-range span,
+        .sqft-range span,
+        .year-range span {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        .features-list {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+    gap: 10px 20px; /* Adjust vertical (10px) and horizontal (20px) spacing */
+    align-items: center; /* Align items vertically within their grid cell */
+}
+
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .search-btn,
+        .reset-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: 'Open Sans', sans-serif;
+            transition: all 0.3s;
+        }
+        
+        .search-btn {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .reset-btn {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        
+        .search-btn:hover {
+            background-color: #c19b2e;
+        }
+        
+        .reset-btn:hover {
+            background-color: #e5e5e5;
+        }
+        
+        .search-results {
+            flex: 2;
+            min-width: 300px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .results-count {
+            font-weight: 600;
+            font-size: 20px;
+        }
+        
+        .view-options {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .view-options span {
+            cursor: pointer;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .view-options span.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px 0;
+        }
+        
+        .no-results p {
+            margin-bottom: 30px;
+            line-height: 2.0;
+        }
+        
+        .no-results a {
+            color: #d4af37;
+            font-weight: 600;
+        }
+        
+        .idx-disclaimer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .idx-disclaimer p {
+            line-height: 1.8;
+        }
+        
+        /* Saved Searches Section Styles */
+        .saved-searches-section {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .saved-searches-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .saved-searches-content p {
+            margin-bottom: 30px;
+            line-height: 2.0;
+        }
+        
+        .account-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #121921;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #c19b2e;
+        }
+        
+        .alt-btn {
+            background-color: #121921;
+            color: white;
+        }
+        
+        .alt-btn:hover {
+            background-color: #1e2a3a;
+        }
+        
+        /* MLS Tutorial Section Styles */
+        .mls-tutorial-section {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .tutorial-image {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .tutorial-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tutorial-description {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .tutorial-description h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 15px;
+        }
+        
+        .tutorial-description p {
+            margin-bottom: 30px;
+            line-height: 2.0;
+        }
+        
+        /* Contact Section Styles */
+        .contact-section {
+            background-color: #121921;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-section p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            line-height: 2.0;
+        }
+        
+        .contact-section .btn {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .contact-section .btn:hover {
+            background-color: white;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .search-container {
+                flex-direction: column;
+            }
+            
+            .search-filters,
+            .search-results {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .page-title h1 {
+                font-size: 36px;
+            }
+            
+            .search-header h2 {
+                font-size: 28px;
+            }
+            
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container, .bottom-nav {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .nav-button {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .account-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+    <meta name="description" content="" />
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/rd-logo-updated.png" alt="RD Logo">
+            </div>
+            <div class="nav-container">
+                <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+                    <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+                    <li class="main-menu-item"><a href="idx.html" class="main-menu-link">MLS SEARCH</a></li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+                    <li class="main-menu-item"><a href="contact.html" class="main-menu-link">CONTACT</a></li>
+                    
+            </div>
+            <div class="bottom-nav">
+                <a href="free-home-evaluation.html" class="nav-button">FREE HOME EVALUATION</a>
+                <a href="mls-search.html" class="nav-button active">MLS SEARCH</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Title -->
+    <section class="page-title">
+        <div class="container">
+            <h1>MLS Property Search</h1>
+        </div>
+    </section>
+
+        <h3>Begin Your Property Search</h3>
+                        <p>Use the filters on the left to search for properties. Your results will appear here.</p>
+                        <p>Need help finding the perfect property? <a href="free-home-evaluation.html">Contact us</a> for personalized assistance.</p>
+                    </div>
+                    
+                    <div class="idx-disclaimer">
+                        <p>Information is provided exclusively for consumers' personal, non-commercial use and may not be used for any purpose other than to identify prospective properties consumers may be interested in purchasing. Information deemed reliable but not guaranteed.</p>
+                        <p>© 2025 Multiple Listing Service. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+   
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <h2>Need Help Finding Your Dream Home?</h2>
+            <p>Let me guide you through the process of finding and purchasing your perfect property. With extensive knowledge of the local market and personalized service, I'll help you navigate every step of your real estate journey.</p>
+            <a href="free-home-evaluation.html" class="btn">Contact Me</a>
+        </div>
+    </section>
+    <script>
+	document.currentScript.replaceWith(ihfKestrel.render());
+</script>
+</body>
+</html>

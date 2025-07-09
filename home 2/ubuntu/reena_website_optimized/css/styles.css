@@ -1,0 +1,1166 @@
+/* Main Styles for Reena Dutta Real Estate Website */
+
+/* Global Styles */
+:root {
+  --black: #111820;
+  --white: #ffffff;
+  --gold: #c9a95c;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--black);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+.script-font {
+  font-family: 'Playfair Display', serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--black);
+  position: relative;
+  z-index: 100;
+  margin-bottom: 20px;
+}
+
+.nav-container {
+  border: 1px solid var(--gold);
+  margin: 10px;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 3px;
+}
+
+nav ul li a {
+  color: var(--white);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+}
+
+nav ul li a:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* Header Branding */
+.header-branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 10px;
+  z-index: 101;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo-container img {
+  height: auto;
+  max-width: 250px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.site-title {
+  font-family: 'PT Serif', serif;
+  color: var(--white);
+  font-size: 48px;
+  font-weight: 400;
+  margin: 5px 0 0 0;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/hero_background.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.realtor-title {
+  font-size: 24px;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.credentials {
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.association {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 40px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 12px 30px;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+/* Section Styles */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 36px;
+  color: var(--black);
+}
+
+/* Featured Communities Section */
+.communities-section {
+  background-color: var(--light-gray);
+}
+
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.community-item {
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+}
+
+.community-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.community-item:hover img {
+  transform: scale(1.05);
+}
+
+.community-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 30px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+
+.about-content p {
+  margin-bottom: 20px;
+}
+
+/* Video Section */
+.video-section {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.video-placeholder {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.video-placeholder img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  background-color: rgba(201, 169, 92, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.play-button i {
+  font-size: 30px;
+  color: var(--white);
+}
+
+.play-button:hover {
+  background-color: var(--gold);
+}
+
+.video-description h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 60px 0 30px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.footer-logo p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.footer-contact h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--dark-gray);
+  border-radius: 50%;
+  margin-right: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--gold);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+}
+
+.footer-brokerage {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-brokerage img {
+  max-width: 150px;
+  height: auto;
+  padding: 5px;
+}
+
+/* Page Title Section */
+.page-title {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 48px;
+}
+
+/* Gold Accents */
+.gold-text {
+  color: var(--gold);
+}
+
+.gold-border {
+  border: 1px solid var(--gold);
+}
+
+.gold-bg {
+  background-color: var(--gold);
+}
+
+/* RD Logo Styling */
+.rd-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: var(--white);
+}
+
+/* Specialty Sections */
+.specialty-section {
+  padding: 80px 0;
+}
+
+.specialty-section.alt-bg {
+  background-color: var(--light-gray);
+}
+
+.specialty-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.specialty-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.specialty-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.specialty-grid.reverse {
+  flex-direction: row-reverse;
+}
+
+.specialty-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.specialty-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.specialty-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 30px;
+}
+
+.specialty-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.specialty-content p {
+  margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 60px 0;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form Styles */
+.form-section {
+  background-color: var(--light-gray);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: var(--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group.half {
+  flex: 1;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  background-color: var(--light-gray);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial {
+  background-color: var(--white);
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial .quote {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial .client {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+/* Areas Section */
+.areas-section {
+  padding: 80px 0;
+}
+
+.areas-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.area-card {
+  margin-bottom: 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.area-image {
+  height: 400px;
+  overflow: hidden;
+}
+
+.area-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.area-content {
+  padding: 40px;
+  background-color: var(--white);
+}
+
+.area-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.area-content p {
+  margin-bottom: 30px;
+}
+
+.area-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.highlight h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--gold);
+}
+
+.highlight ul li {
+  margin-bottom: 5px;
+}
+
+/* Property Search Section */
+.property-search {
+  padding: 80px 0;
+}
+
+.search-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.search-header h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.search-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.search-filters {
+  flex: 1;
+  min-width: 300px;
+  background-color: var(--light-gray);
+  padding: 30px;
+}
+
+.search-filters h3 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.search-results {
+  flex: 2;
+  min-width: 500px;
+}
+
+.results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.view-options span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.view-options span.active {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.property-card {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.property-image {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.property-status {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: var(--gold);
+  color: var(--black);
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.property-details {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.property-price {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.property-address {
+  color: var(--dark-gray);
+  margin-bottom: 15px;
+}
+
+.property-specs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.property-specs span {
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.property-specs i {
+  margin-right: 5px;
+  color: var(--gold);
+}
+
+.property-description {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.property-link {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+}
+
+.pagination a.active {
+  background-color: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+}
+
+/* Sales Gallery */
+.sales-gallery {
+  padding: 80px 0;
+}
+
+.sales-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.sale-item {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.sale-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.sale-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.sale-item:hover .sale-image img {
+  transform: scale(1.05);
+}
+
+.sale-details {
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.sale-details h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.sale-address {
+  color: var(--dark-gray);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.sale-price {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.sale-specs {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.sale-description {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Resources Section */
+.resources-section {
+  background-color: var(--light-gray);
+}
+
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.resource-card {
+  background-color: var(--white);
+  padding: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.resource-card h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: var(--gold);
+}
+
+.resource-card ul li {
+  margin-bottom: 10px;
+}
+
+.resource-card ul li a {
+  color: var(--black);
+  transition: color 0.3s ease;
+}
+
+.resource-card ul li a:hover {
+  color: var(--gold);
+}
+
+/* Dream Home Section */
+.dream-home {
+  height: 600px;
+  background-image: url('../images/luxury_home_bg.png');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 40px 0;
+}
+
+.dream-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+}
+
+.dream-home-content {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  max-width: 600px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--gold);
+  border-radius: 5px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dream-home-content h2 {
+  font-size: 54px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+/* Evaluation Section */
+.evaluation-section {
+  padding: 80px 0;
+}
+
+.evaluation-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.evaluation-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.evaluation-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.evaluation-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 0 30px;
+}
+
+.evaluation-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.evaluation-content h3 {
+  font-size: 20px;
+  margin: 30px 0 15px;
+}
+
+.evaluation-list li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.evaluation-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--gold);
+  border-radius: 50%;
+}
+
+/* Intro Section */
+.intro-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.intro-content p {
+  margin-bottom: 20px;
+}
+
+/* Area specific pages */
+.area-section {
+  padding: 80px 0;
+}
+
+.area-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.area-image-full {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.area-image-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.area-content {
+  margin-bottom: 60px;
+}
+
+.area-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.area-neighborhoods {
+  margin-bottom: 60px;
+}
+
+.area-neighborhoods h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.neighborhood {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.neighborhood-image {
+  flex: 1;
+  min-width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.neighborhood-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.neighborhood-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+}
+
+.neighborhood-content h4 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.area-market {
+  background-color: var(--light-gray);
+  padding: 40px;
+  border-radius: 5px;
+}
+
+.area-market h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.area-market ul {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.area-market ul li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+/* Ensure all images display properly */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments for navigation buttons */
+@media (max-width: 768px) {
+  nav ul li a {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  
+  nav ul {
+    gap: 3px;
+  }
+}

@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Simi Valley - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #FFFFFF);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: ##FFFFFF;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #FFFFFF;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation - New Style Based on Screenshot */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+        
+        /* New Navigation Style with Improved Alignment */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        
+        .nav-button {
+            padding: 15px 20px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #d4af37;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 16px;
+            min-width: 150px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+        }
+        
+        .nav-button:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .nav-button.active {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Dropdown styles with improved alignment */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown .nav-button {
+            cursor: pointer;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) ;
+            z-index: 1;
+            text-align: left;
+            left: 0;
+            top: 100%;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background-image: url('images/simi_valley_main.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c4a030;
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-image {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-content p {
+            color: #666;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .nav-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <div class="nav-buttons">
+                <div class="nav-row">
+                    <a href="index.html" class="nav-button">HOME</a>
+                    <div class="dropdown">
+                        <a class="nav-button">COMMUNITIES</a>
+                        <div class="dropdown-content">
+                            <a href="conejo-valley.html">CONEJO VALLEY</a>
+                            <a href="agoura-hills.html">AGOURA HILLS</a>
+                            <a href="calabasas.html">CALABASAS</a>
+                            <a href="camarillo.html">CAMARILLO</a>
+                            <a href="malibu.html">MALIBU</a>
+                            <a href="moorpark.html">MOORPARK</a>
+                            <a href="simi-valley.html">SIMI VALLEY</a>
+                            <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                            <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                            <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                            <a href="oxnard.html">OXNARD</a>
+                            <a href="ventura.html">VENTURA</a>
+                        </div>
+                    </div>
+                    <a href="market-trends.html" class="nav-button">MARKET TRENDS</a>
+                    <a href="investment-calculator.html" class="nav-button">MORTGAGE CALCULATOR</a>
+                    <a href="some-areas-of-expertise.html" class="nav-button">SOME AREAS OF EXPERTISE</a>
+                    <a href="#" class="nav-button">HOMES WE SPECIALIZE IN</a>
+                </div>
+                <div class="nav-row">
+                    <a href="about-us.html" class="nav-button">ABOUT US</a>
+                    <a href="free-home-evaluation.html" class="nav-button">FREE HOME EVALUATION</a>
+                    <a href="#" class="nav-button">MLS SEARCH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Simi Valley, California</h1>
+            <p>A perfect blend of suburban comfort, natural beauty, and family-friendly living</p>
+            <a href="#" class="cta-button">Explore Simi Valley Properties</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Living in Simi Valley</h2>
+                <p>Discover what makes Simi Valley one of Ventura County's most desirable communities</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-town-center.png" alt="Shopping & Dining" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Shopping & Dining</h3>
+                        <p>Simi Valley Town Center and surrounding areas offer a variety of shopping options, from national retailers to local boutiques, along with diverse dining experiences for every taste.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-hiking-trail.png" alt="Natural Beauty & Recreation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Natural Beauty & Recreation</h3>
+                        <p>Surrounded by the Santa Susana Mountains and Simi Hills, the area offers miles of hiking trails, parks, and outdoor recreational facilities for active lifestyles.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-school.png" alt="Excellent Schools" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Excellent Schools</h3>
+                        <p>Simi Valley Unified School District provides quality education with several highly-rated schools, making it an attractive location for families with children.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/moorpark-emergency-services.png" alt="Safety & Security" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Safety & Security</h3>
+                        <p>Consistently ranked among the safest cities in Ventura County, Simi Valley offers peace of mind with low crime rates and responsive emergency services.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/Simi-Valley-Street-Fair.png" alt="Strong Community" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Strong Community</h3>
+                        <p>Simi Valley hosts numerous community events throughout the year, including the Simi Valley Days festival and concerts in the park, fostering connections among residents.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-map-location.png" alt="Convenient Location" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Convenient Location</h3>
+                        <p>Located just 40 minutes from downtown Los Angeles, Simi Valley offers an ideal balance of suburban tranquility with easy access to urban amenities and employment centers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods Section -->
+    <section class="features-section" style="background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simi Valley Neighborhoods</h2>
+                <p>Explore the distinctive communities that make up this family-friendly city</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/wood_ranch_aerial.jpg" alt="Wood Ranch" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Wood Ranch</h3>
+                        <p>A premier master-planned community featuring a variety of housing options, from luxury estates to townhomes, with beautiful landscaping, mountain views, and access to the Wood Ranch Golf Club.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/big_sky.jpg" alt="Big Sky" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Big Sky</h3>
+                        <p>A newer community featuring contemporary homes with modern amenities and stunning mountain views, offering a convenient location near shopping, dining, and recreational facilities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/santa_susana_knolls.jpg" alt="Santa Susana Knolls" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Santa Susana Knolls</h3>
+                        <p>A unique area offering a rural atmosphere with larger lots and a variety of architectural styles, providing a more secluded setting with natural surroundings and wildlife.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-texas-tract.png" alt="Texas Tract" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Texas Tract</h3>
+                        <p>An established neighborhood with charming homes on spacious lots, offering a family-friendly environment with tree-lined streets and a strong sense of community.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-bridle-path.png" alt="Bridle Path" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Bridle Path</h3>
+                        <p>An equestrian-friendly neighborhood featuring larger properties with horse facilities, offering a semi-rural lifestyle while still being close to urban amenities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/simi-hills-golf-course.png" alt="Simi Hills" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Simi Hills</h3>
+                        <p>A desirable area with a mix of housing styles, many offering panoramic views of the surrounding hills and valleys, with convenient access to golf courses and recreational facilities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Stats Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Simi Valley Real Estate Market</h2>
+                <p>Current trends and statistics for this desirable Ventura County community</p>
+            </div>
+            
+            <div style="text-align: center; margin-bottom: 40px;">
+                <p>The Simi Valley real estate market remains strong, with consistent demand for properties in this desirable area. The combination of excellent schools, safe neighborhoods, and convenient location continues to attract buyers seeking a high quality of life in Ventura County.</p>
+                
+                <p>Current market trends include steady appreciation in property values, strong demand for homes in top school districts, growing interest in properties with larger lots and outdoor spaces, increasing appeal to buyers looking for more space outside of Los Angeles, and new construction developments to meet growing demand.</p>
+                
+                <a href="#" class="cta-button" style="margin-top: 20px;">VIEW SIMI VALLEY LISTINGS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with corrected styling and content changes -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #121921; padding: 60px 0 20px; color: white;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">REALTOR���</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; text-align: center;">
+                    <div style="text-align: center; height: 120px; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/reena-headshot.jpg" alt="Reena Dutta" style="max-width: 120px; border-radius: 50%; border: 1px solid #d4af37;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: center; color: #d4af37;">Connect With Me</p>
+                        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/y_realty_logo_white.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="color: white;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="copyright" style="text-align: center;">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
