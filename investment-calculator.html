@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Investment Calculator - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 18px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Brand Header Styles */
+        .brand-header {
+            background-color: white;
+            padding: 15px 0;
+            text-align: center;
+            border-bottom: 2px solid #d4af37;
+            width: 100%;
+            overflow: visible;
+            position: relative;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #121921;
+            margin: 0;
+            width: 100%;
+            display: block;
+            position: relative;
+            left: 0;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            color: #d4af37;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2) ;
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Investment Calculator Specific Styles */
+        .calculator-section {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .calculator-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+        }
+
+        .calculator-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .calculator-form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .calculator-results {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+
+        .result-item {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .positive {
+            color: green;
+            font-weight: bold;
+        }
+
+        .negative {
+            color: red;
+            font-weight: bold;
+        }
+
+        .calculate-btn {
+            grid-column: span 2;
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .calculate-btn:hover {
+            background-color: #b8982f;
+        }
+
+        .chart-container {
+            margin-top: 30px;
+            height: 300px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+            border-top: 4.5px solid #d4af37;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .calculator-form {
+                grid-template-columns: 1fr;
+            }
+            .calculate-btn {
+                grid-column: span 1;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu-items">
+                    <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                            <div class="communities-dropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                      </div>
+                     </li>
+                    <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+                    <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+                    <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+                     <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Investment Calculator Section -->
+    <section class="calculator-section">
+        <div class="container">
+            <h1 class="calculator-title">Investment Property Analysis Tool</h1>
+            <div class="calculator-container">
+                <p>Make informed real estate investment decisions with our comprehensive analysis calculator.</p>
+                
+                <div class="calculator-form">
+                    <div class="form-group">
+                        <label for="purchase-price">Purchase Price ($)</label>
+                        <input type="number" id="purchase-price" value="500000">
+                    </div>
+                    <div class="form-group">
+                        <label for="down-payment">Down Payment (%)</label>
+                        <input type="number" id="down-payment" value="20">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest-rate">Interest Rate (%)</label>
+                        <input type="number" id="interest-rate" value="4.5" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="loan-term">Loan Term (years)</label>
+                        <input type="number" id="loan-term" value="30">
+                    </div>
+                    <div class="form-group">
+                        <label for="monthly-rent">Monthly Rental Income ($)</label>
+                        <input type="number" id="monthly-rent" value="3000">
+                    </div>
+                    <div class="form-group">
+                        <label for="property-tax">Annual Property Tax ($)</label>
+                        <input type="number" id="property-tax" value="5000">
+                    </div>
+                    <div class="form-group">
+                        <label for="insurance">Annual Insurance ($)</label>
+                        <input type="number" id="insurance" value="1200">
+                    </div>
+                    <div class="form-group">
+                        <label for="maintenance">Annual Maintenance ($)</label>
+                        <input type="number" id="maintenance" value="2400">
+                    </div>
+                    <div class="form-group">
+                        <label for="vacancy-rate">Vacancy Rate (%)</label>
+                        <input type="number" id="vacancy-rate" value="5">
+                    </div>
+                    <div class="form-group">
+                        <label for="property-management">Property Management Fee (%)</label>
+                        <input type="number" id="property-management" value="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="appreciation-rate">Annual Appreciation Rate (%)</label>
+                        <input type="number" id="appreciation-rate" value="3" step="0.1">
+                    </div>
+                    <div class="form-group">
+                        <label for="closing-costs">Closing Costs (%)</label>
+                        <input type="number" id="closing-costs" value="2" step="0.1">
+                    </div>
+                    
+                    <button class="calculate-btn" onclick="calculateInvestment()">Calculate Investment</button>
+                </div>
+                
+                <div class="calculator-results" id="results" style="display: none;">
+                    <h3>Investment Analysis Results</h3>
+                    
+                    <div class="result-item">
+                        <strong>Monthly Cash Flow:</strong> <span id="monthly-cash-flow"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Annual Cash Flow:</strong> <span id="annual-cash-flow"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Cash on Cash Return:</strong> <span id="cash-on-cash"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Cap Rate:</strong> <span id="cap-rate"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Total Return (5 Years):</strong> <span id="five-year-return"></span>
+                    </div>
+                    <div class="result-item">
+                        <strong>Break-Even Point:</strong> <span id="break-even"></span>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <canvas id="cash-flow-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mortgage-disclaimer" style="text-align: center; font-size: 14px; color: #666; margin-top: 30px; padding: 0 15px;">
+            This mortgage calculator is for informational purposes only and does not constitute financial or legal advice. Actual loan terms, interest rates, and eligibility will vary; consult a licensed lender for personalized information.
+        </p>
+        <p class="investment-disclaimer" style="text-align: center; font-size: 14px; color: #666; margin-top: 10px; padding: 0 15px;">
+            The investment calculator provides hypothetical returns and is not a guarantee of future performance. Please consult a financial advisor before making any investment decisions.
+        </p>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #12192<!-- Footer -->
+<footer style="background-color: #121921; color: white; padding: 60px 0 30px; border-top: 4.5px solid #d4af37;">
+    <div class="container">
+        <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 40px;">
+            <!-- Left Column - Reena Dutta -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: left; color: white;">
+                <div style="margin-bottom: 20px;">
+                    <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px; height: auto;">
+                </div>
+                <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color: white;">Reena Dutta</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">REALTOR®</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">DRE# 02194500</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Phone: 805-340-2583</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Website: reenaduttarealestate.com</p>
+            </div>
+
+            <!-- Middle Column - Connect With Me -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: center; color: white;">
+                 <h3 style="color: #d4af37; font-size: 20px; margin-bottom: 20px; font-weight: bold;">Connect With Me</h3>
+                 <div style="margin-bottom: 20px;">
+                     <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border: 2px solid #d4af37; border-radius: 4px;">
+                 </div>
+                 <div class="social-icons" style="display: flex; justify-content: center; gap: 15px;">
+                     <a href="https://www.facebook.com/ReenaDuttaRealEstate" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/reena.dutta11/" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.tiktok.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-tiktok"></i></a>
+                     <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
+                     <a href="https://www.youtube.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+                 </div>
+            </div>
+
+            <!-- Right Column - Y Realty -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: left; color: white;">
+                 <div style="margin-bottom: 20px;">
+                     <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px; height: auto;">
+                 </div>
+                 <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color: white;">Y Realty Inc.</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">DRE# 02202700</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Phone (office): 877-976-5348</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Website: yrealty.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+             <p style="font-size: 18px; margin-bottom: 15px; color: white;">Elevating Life Through Real Estate</p>
+             <p style="font-size: 14px; color: #ccc;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+        </div>
+    </div>
+</footer>footer>
+
+    <!-- JavaScript for Calculator -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        function calculateInvestment()  {
+            // Get input values
+            const purchasePrice = parseFloat(document.getElementById('purchase-price').value);
+            const downPaymentPercent = parseFloat(document.getElementById('down-payment').value);
+            const interestRate = parseFloat(document.getElementById('interest-rate').value);
+            const loanTerm = parseFloat(document.getElementById('loan-term').value);
+            const monthlyRent = parseFloat(document.getElementById('monthly-rent').value);
+            const propertyTax = parseFloat(document.getElementById('property-tax').value);
+            const insurance = parseFloat(document.getElementById('insurance').value);
+            const maintenance = parseFloat(document.getElementById('maintenance').value);
+            const vacancyRate = parseFloat(document.getElementById('vacancy-rate').value);
+            const propertyManagement = parseFloat(document.getElementById('property-management').value);
+            const appreciationRate = parseFloat(document.getElementById('appreciation-rate').value);
+            const closingCosts = parseFloat(document.getElementById('closing-costs').value);
+            
+            // Calculate loan amount and down payment
+            const downPayment = purchasePrice * (downPaymentPercent / 100);
+            const loanAmount = purchasePrice - downPayment;
+            
+            // Calculate monthly mortgage payment
+            const monthlyInterestRate = interestRate / 100 / 12;
+            const numberOfPayments = loanTerm * 12;
+            const monthlyMortgage = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+            
+            // Calculate monthly expenses
+            const monthlyPropertyTax = propertyTax / 12;
+            const monthlyInsurance = insurance / 12;
+            const monthlyMaintenance = maintenance / 12;
+            const monthlyVacancy = monthlyRent * (vacancyRate / 100);
+            const monthlyManagement = monthlyRent * (propertyManagement / 100);
+            
+            const totalMonthlyExpenses = monthlyMortgage + monthlyPropertyTax + monthlyInsurance + monthlyMaintenance + monthlyVacancy + monthlyManagement;
+            
+            // Calculate cash flow
+            const monthlyCashFlow = monthlyRent - totalMonthlyExpenses;
+            const annualCashFlow = monthlyCashFlow * 12;
+            
+            // Calculate initial investment
+            const initialInvestment = downPayment + (purchasePrice * (closingCosts / 100));
+            
+            // Calculate returns
+            const cashOnCashReturn = (annualCashFlow / initialInvestment) * 100;
+            const capRate = (annualCashFlow / purchasePrice) * 100;
+            
+            // Calculate 5-year return
+            let totalReturn = 0;
+            let propertyValue = purchasePrice;
+            let totalCashFlow = 0;
+            
+            for (let i = 1; i <= 5; i++) {
+                propertyValue *= (1 + (appreciationRate / 100));
+                totalCashFlow += annualCashFlow;
+            }
+            
+            const equity = propertyValue - loanAmount;
+            const fiveYearReturn = ((equity + totalCashFlow - initialInvestment) / initialInvestment) * 100;
+            
+            // Calculate break-even point (months)
+            const breakEven = initialInvestment / monthlyCashFlow;
+            
+            // Display results
+            document.getElementById('monthly-cash-flow').textContent = formatCurrency(monthlyCashFlow);
+            document.getElementById('monthly-cash-flow').className = monthlyCashFlow >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('annual-cash-flow').textContent = formatCurrency(annualCashFlow);
+            document.getElementById('annual-cash-flow').className = annualCashFlow >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('cash-on-cash').textContent = formatPercentage(cashOnCashReturn);
+            document.getElementById('cash-on-cash').className = cashOnCashReturn >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('cap-rate').textContent = formatPercentage(capRate);
+            document.getElementById('cap-rate').className = capRate >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('five-year-return').textContent = formatPercentage(fiveYearReturn);
+            document.getElementById('five-year-return').className = fiveYearReturn >= 0 ? 'positive' : 'negative';
+            
+            document.getElementById('break-even').textContent = breakEven.toFixed(1) + ' months';
+            
+            // Show results
+            document.getElementById('results').style.display = 'block';
+            
+            // Create chart
+            createCashFlowChart(monthlyCashFlow);
+        }
+        
+        function formatCurrency(value) {
+            return '$' + value.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+        }
+        
+        function formatPercentage(value) {
+            return value.toFixed(2) + '%';
+        }
+        
+        function createCashFlowChart(monthlyCashFlow) {
+            const ctx = document.getElementById('cash-flow-chart').getContext('2d');
+            
+            // Generate data for 10 years
+            const labels = [];
+            const cashFlowData = [];
+            const propertyValueData = [];
+            
+            const purchasePrice = parseFloat(document.getElementById('purchase-price').value);
+            const appreciationRate = parseFloat(document.getElementById('appreciation-rate').value) / 100;
+            const annualCashFlow = monthlyCashFlow * 12;
+            
+            for (let i = 0; i <= 10; i++) {
+                labels.push('Year ' + i);
+                cashFlowData.push(annualCashFlow * i);
+                propertyValueData.push(purchasePrice * Math.pow(1 + appreciationRate, i));
+            }
+            
+            // Destroy previous chart if exists
+            if (window.cashFlowChart) {
+                window.cashFlowChart.destroy();
+            }
+            
+            // Create new chart
+            window.cashFlowChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Cumulative Cash Flow',
+                            data: cashFlowData,
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Property Value',
+                            data: propertyValueData,
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toLocaleString();
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>

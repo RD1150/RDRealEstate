@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDX Minimal Test</title>
+    <!-- iHomefinder Step 1 Script -->
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+    <script>
+        window.ihfKestrel = window.ihfKestrel || {};
+        ihfKestrel.config = {
+            platform: "custom",
+            activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A", // Use your actual token
+        };
+    </script>
+</head>
+<body>
+    <h1>IDX Minimal Test Page</h1>
+    <p>The iHomefinder content should load below this line:</p>
+    <hr>
+    <!-- iHomefinder Step 3 Script -->
+    <script>
+        document.currentScript.replaceWith(ihfKestrel.render());
+    </script>
+    <hr>
+    <p>End of test page content.</p>
+</body>
+</html>
+

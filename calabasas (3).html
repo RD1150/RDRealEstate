@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Calabasas - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Hero section styling */
+        .hero {
+            background-image: url('images/B0BF5364-0C3B-4690-8EAB-B86EF16F2504.png') !important;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            font-family: 'PT Serif', serif;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero-content .realtor-title,
+        .hero-content .credentials,
+        .hero-content .association,
+        .hero-content .tagline {
+            color: white;
+        }
+
+        .hero-content .tagline {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        /* About section styling */
+        .about-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .about-image {
+            flex: 0 0 300px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .about-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Communities grid styling */
+        .communities-section {
+            padding: 60px 0;
+        }
+
+        .section-title, .featured-communities-title {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .communities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .community-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .community-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .community-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .community-name {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Featured property section */
+        .featured-property-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .featured-property-image img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .featured-property-description {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .featured-property-description h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Dream home section */
+        .dream-home {
+            height: 400px;
+            background-image: url('images/B0BF5364-0C3B-4690-8EAB-B86EF16F2504.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .dream-home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .dream-home-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .dream-home-content h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .dream-home-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        /* Button styling */
+        .btn, .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #121921 !important; /* Ensure text color is dark */
+            padding: 12px 25px;
+            text-decoration: none !important; /* Remove underline */
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            border: none; /* Ensure no border */
+            cursor: pointer;
+        }
+
+        .btn:hover, .cta-button:hover {
+            background-color: #b8982f;
+            color: #121921 !important; /* Keep text color dark on hover */
+        }
+
+        /* Explicitly set link states for cta-button to avoid purple */
+        .cta-button:link,
+        .cta-button:visited,
+        .cta-button:active,
+        .cta-button:focus {
+            color: #121921 !important;
+            text-decoration: none !important;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: #f5f5f5;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .communities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content h1 {
+                font-size: 50px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            body {
+                font-size: 22px;
+            }
+            h1 { font-size: 50px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            .hero-content h1 {
+                font-size: 40px;
+            }
+            body {
+                font-size: 20px;
+            }
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+        }
+
+        @media (max-width: 576px) {
+            .communities-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            body {
+                font-size: 18px;
+            }
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+<nav class="main-menu">
+    <ul class="main-menu-items">
+        <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container">
+                <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                <div class="communities-dropdown">
+                    <a href="conejo-valley.html">CONEJO VALLEY</a>
+                    <a href="agoura-hills.html">AGOURA HILLS</a>
+                    <a href="calabasas.html">CALABASAS</a>
+                    <a href="camarillo.html">CAMARILLO</a>
+                    <a href="malibu.html">MALIBU</a>
+                    <a href="moorpark.html">MOORPARK</a>
+                    <a href="simi-valley.html">SIMI VALLEY</a>
+                    <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                    <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                    <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                    <a href="oxnard.html">OXNARD</a>
+                    <a href="ventura.html">VENTURA</a>
+                </div>
+            </div>
+        </li>
+        <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+        <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+        <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+        <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+        <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+        <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+        <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+        <!-- New Resources Dropdown -->
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container"> <!-- Reusing dropdown styles for consistency -->
+                <button class="communities-dropdown-toggle">RESOURCES</button>
+                <div class="communities-dropdown">
+                    <a href="buyer-guides.html">BUYER GUIDES</a>
+                    <a href="seller-guides.html">SELLER GUIDES</a>
+                    <a href="relocation-guide.html">RELOCATION GUIDE</a>
+                    <a href="service-providers.html">SERVICE PROVIDERS</a>
+                </div>
+            </div>
+        </li>
+        <!-- End New Resources Dropdown -->
+        <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+        <li class="main-menu-item"><a href="contact.html" class="main-menu-link">Contact Us</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Calabasas, California</h1>
+            <p>Luxury living in a serene and exclusive community</p>
+            <a href="#" class="cta-button">Explore Calabasas Properties</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Living in Calabasas</h2>
+                <p>Discover what makes Calabasas one of Southern California's most desirable communities</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-commons-shopping.png" alt="Upscale Shopping & Dining" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Upscale Shopping & Dining</h3>
+                        <p>The Commons at Calabasas offers a premier outdoor shopping experience with luxury retailers, fine dining establishments, and entertainment options in a beautiful Mediterranean-inspired setting.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-hiking-trails.jpeg" alt="Natural Beauty & Recreation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Natural Beauty & Recreation</h3>
+                        <p>Surrounded by the Santa Monica Mountains, Calabasas offers miles of hiking trails, mountain biking paths, equestrian facilities, and pristine parks for outdoor enthusiasts.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/Calabasas-High-School-Performing-Arts.png" alt="Top-Rated Schools" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Top-Rated Schools</h3>
+                        <p>Calabasas is served by the Las Virgenes Unified School District, known for its excellent academic programs, high test scores, and comprehensive extracurricular offerings.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-gated-safety.png" alt="Safety & Security" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Safety & Security</h3>
+                        <p>Consistently ranked among the safest cities in California, Calabasas features many gated communities and a dedicated sheriff's station providing residents with peace of mind.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/luxury-homes.png" alt="Luxury Real Estate" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Luxury Real Estate</h3>
+                        <p>From custom estates in The Oaks to Mediterranean villas in Calabasas Park, the city offers diverse luxury housing options with stunning architecture and premium amenities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-map.png" alt="Prime Location" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Prime Location</h3>
+                        <p>Located just 30 minutes from downtown Los Angeles and minutes from Malibu beaches, Calabasas offers the perfect balance of secluded luxury and convenient accessibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods Section -->
+    <section class="features-section" style="background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Calabasas Neighborhoods</h2>
+                <p>Explore the distinctive communities that make up this prestigious city</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-the-oaks.png" alt="The Oaks" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>The Oaks</h3>
+                        <p>An exclusive double-gated community featuring custom estates on large lots with spectacular mountain views. Home to many celebrities and executives seeking privacy and luxury.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-park.png" alt="Calabasas Park" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Calabasas Park</h3>
+                        <p>A family-friendly neighborhood with a mix of single-family homes and townhouses, offering access to excellent schools, parks, and community amenities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-mountain-view.png" alt="Mountain View Estates" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Mountain View Estates</h3>
+                        <p>A prestigious gated community featuring spacious homes with stunning views of the surrounding mountains and valleys, plus access to private tennis courts and parks.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-country-estates.png" alt="Calabasas Country Estates" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Calabasas Country Estates</h3>
+                        <p>An established neighborhood with larger lots and custom homes, many offering panoramic views and a more rural atmosphere while still being close to amenities.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-highlands.png" alt="Calabasas Highlands" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Calabasas Highlands</h3>
+                        <p>A secluded community nestled in the hills offering privacy, natural beauty, and larger properties with a more rustic feel and spectacular views.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/calabasas-commons-condos.png" alt="The Commons" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>The Commons</h3>
+                        <p>Luxury condominiums and townhomes located near the popular Commons shopping center, offering a convenient lifestyle with walkable access to shopping, dining, and entertainment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with corrected styling and content changes -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #121921; padding: 60px 0 20px; color: white;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">REALTOR®</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 23px; text-align: center; margin-bottom: 15px; font-weight: bold; color: #d4af37;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border: 1px solid #d4af37;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="https://www.facebook.com/reenaduttarealestate" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reena.dutta11" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+                          <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+                            <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+                          </div>
+                        </a>
+                        <a href="https://www.youtube.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="color: white;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="footer-review-link" style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <p style="color: white; font-size: 16px;">Enjoyed working with me? <a href="https://g.page/r/CZQjEU6Ak-2UEAE/review" target="_blank" style="color: #d4af37; text-decoration: underline;">Leave a review on Google!</a></p>
+            </div>
+            <div class="copyright" style="text-align: center;">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add any JavaScript functionality here
+        });
+    </script>
+</body>
+</html>
