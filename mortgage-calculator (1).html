@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation menu styling */
+        .nav-container {
+            background-color: #121921;
+            padding: 15px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            height: 60px;
+        }
+
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Communities dropdown styling */
+        .communities-dropdown-container {
+            position: relative;
+        }
+        
+        .communities-dropdown-toggle {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .communities-dropdown-toggle:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border: 2px solid #d4af37;
+            border-top: none;
+        }
+        
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('images/Mortgage-Calculator.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(18, 25, 33, 0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .hero p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #121921;
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo h3, .footer-contact h3, .footer-social h3 {
+            color: #d4af37;
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo p, .footer-contact p {
+            margin: 5px 0;
+            color: #f5f5f5;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #d4af37;
+            color: #121921;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: white;
+            color: #121921;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+
+        .footer-brokerage p {
+            margin: 5px 0;
+            color: #f5f5f5;
+        }
+
+        /* Mortgage Calculator */
+        .mortgage-calculator-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            margin: 40px 0;
+        }
+
+        .mortgage-calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .mortgage-calculator-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .mortgage-calculator-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 15px;
+        }
+
+        .mortgage-calculator-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Calculator Layout */
+        .calculator-layout {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .calculator-inputs {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        .calculator-results {
+            flex: 1;
+            min-width: 300px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        /* Input Styling */
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .input-group input[type="number"],
+        .input-group input[type="text"],
+        .input-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 18px;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #d4af37;
+            outline: none;
+        }
+
+        .slider-container {
+            margin-top: 10px;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #ddd;
+            outline: none;
+            margin-top: 10px;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #d4af37;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #d4af37;
+            cursor: pointer;
+        }
+
+        .input-prefix {
+            position: relative;
+        }
+
+        .input-prefix input {
+            padding-left: 30px;
+        }
+
+        .input-prefix::before {
+            content: "$";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-weight: 600;
+        }
+
+        .input-suffix {
+            position: relative;
+        }
+
+        .input-suffix input {
+            padding-right: 40px;
+        }
+
+        .input-suffix::after {
+            content: "%";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-weight: 600;
+        }
+
+        .calculate-btn {
+            background-color: #d4af37;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .calculate-btn:hover {
+            background-color: #b8941e;
+        }
+
+        /* Results Styling */
+        .result-group {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .result-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 5px;
+        }
+
+        .result-label {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .result-details {
+            margin-top: 30px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .detail-label {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .detail-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            margin-top: 30px;
+            height: 250px;
+            position: relative;
+        }
+
+        /* Dark Theme Version */
+        .mortgage-calculator-dark {
+            background-color: #121921;
+            color: white;
+        }
+
+        .mortgage-calculator-dark .mortgage-calculator-header h2 {
+            color: #d4af37;
+        }
+
+        .mortgage-calculator-dark .mortgage-calculator-header p {
+            color: #f5f5f5;
+        }
+
+        .mortgage-calculator-dark .calculator-inputs,
+        .mortgage-calculator-dark .calculator-results {
+            background-color: #1e2a3a;
+        }
+
+        .mortgage-calculator-dark .input-group label {
+            color: #f5f5f5;
+        }
+
+        .mortgage-calculator-dark .input-group input,
+        .mortgage-calculator-dark .input-group select {
+            background-color: #2c3e50;
+            border-color: #34495e;
+            color: #f5f5f5;
+        }
+
+        .mortgage-calculator-dark .slider {
+            background: #2c3e50;
+        }
+
+        .mortgage-calculator-dark .input-prefix::before,
+        .mortgage-calculator-dark .input-suffix::after {
+            color: #ccc;
+        }
+
+        .mortgage-calculator-dark .result-label {
+            color: #ccc;
+        }
+
+        .mortgage-calculator-dark .detail-label,
+        .mortgage-calculator-dark .detail-value {
+            color: #f5f5f5;
+        }
+
+        .mortgage-calculator-dark .result-details {
+            border-top-color: #2c3e50;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-image: linear-gradient(rgba(18, 25, 33, 0.8), rgba(18, 25, 33, 0.8)), url('images/investment-properties2.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .cta-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #121921;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            .footer-logo, .footer-contact, .footer-social {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 10px 0;
+            }
+            
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+            
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            .calculator-layout {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 576px) {
+            body {
+                font-size: 16px;
+            }
+            
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu-items">
+                    <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                            <div class="communities-dropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+                    <li class="main-menu-item"><a href="contact.html" class="main-menu-link">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Mortgage Calculator</h1>
+            <p>Plan your home financing with our interactive tools</p>
+        </div>
+    </section>
+
+    <!-- Standard Mortgage Calculator -->
+    <section class="mortgage-calculator-section">
+        <div class="container">
+            <div class="mortgage-calculator-container">
+                <div class="mortgage-calculator-header">
+                    <h2>Mortgage Payment Calculator</h2>
+                    <p>Estimate your monthly mortgage payments and see a complete breakdown of your costs.</p>
+                </div>
+                
+                <div class="calculator-layout">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="home-price">Home Price</label>
+                            <div class="input-prefix">
+                                <input type="number" id="home-price" value="750000" min="50000" max="10000000" step="10000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="home-price-slider" min="50000" max="3000000" value="750000" step="10000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="down-payment">Down Payment</label>
+                            <div class="input-prefix">
+                                <input type="number" id="down-payment" value="150000" min="0" max="10000000" step="5000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="down-payment-slider" min="0" max="1000000" value="150000" step="5000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loan-term">Loan Term</label>
+                            <select id="loan-term">
+                                <option value="30">30 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="15">15 Years</option>
+                                <option value="10">10 Years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="interest-rate">Interest Rate</label>
+                            <div class="input-suffix">
+                                <input type="number" id="interest-rate" value="6.5" min="0.1" max="15" step="0.125">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="interest-rate-slider" min="0.1" max="10" value="6.5" step="0.125">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="property-tax">Annual Property Tax</label>
+                            <div class="input-suffix">
+                                <input type="number" id="property-tax" value="1.2" min="0" max="5" step="0.1">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="home-insurance">Annual Home Insurance</label>
+                            <div class="input-prefix">
+                                <input type="number" id="home-insurance" value="2400" min="0" max="10000" step="100">
+                            </div>
+                        </div>
+                        
+                        <button class="calculate-btn" id="calculate-btn">Calculate Payment</button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-group">
+                            <div class="result-value" id="monthly-payment">$3,791</div>
+                            <div class="result-label">Monthly Payment</div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="payment-chart"></canvas>
+                        </div>
+                        
+                        <div class="result-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Principal & Interest</div>
+                                <div class="detail-value" id="principal-interest">$3,033</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Property Tax</div>
+                                <div class="detail-value" id="monthly-tax">$750</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Home Insurance</div>
+                                <div class="detail-value" id="monthly-insurance">$200</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Loan Amount</div>
+                                <div class="detail-value" id="loan-amount">$600,000</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Total Interest Paid</div>
+                                <div class="detail-value" id="total-interest">$491,640</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Total Cost</div>
+                                <div class="detail-value" id="total-cost">$1,364,640</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <p class="mortgage-disclaimer" style="text-align: center; font-size: 14px; color: #666; margin-top: 30px; padding: 0 15px; max-width: 900px; margin-left: auto; margin-right: auto;">
+        This mortgage calculator is for informational purposes only and does not constitute financial or legal advice. Actual loan terms, interest rates, and eligibility will vary; consult a licensed lender for personalized information.
+    </p>
+
+    <!-- Dark Theme Mortgage Calculator -->
+    <section class="mortgage-calculator-section mortgage-calculator-dark">
+        <div class="container">
+            <div class="mortgage-calculator-container">
+                <div class="mortgage-calculator-header">
+                    <h2>Luxury Home Financing</h2>
+                    <p>Calculate payments for high-value properties with our premium mortgage calculator.</p>
+                </div>
+                
+                <div class="calculator-layout">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="luxury-home-price">Home Price</label>
+                            <div class="input-prefix">
+                                <input type="number" id="luxury-home-price" value="2500000" min="500000" max="20000000" step="50000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="luxury-home-price-slider" min="500000" max="10000000" value="2500000" step="50000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="luxury-down-payment">Down Payment</label>
+                            <div class="input-prefix">
+                                <input type="number" id="luxury-down-payment" value="500000" min="0" max="10000000" step="10000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="luxury-down-payment-slider" min="0" max="5000000" value="500000" step="10000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="luxury-loan-term">Loan Term</label>
+                            <select id="luxury-loan-term">
+                                <option value="30">30 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="15">15 Years</option>
+                                <option value="10">10 Years</option>
+                                <option value="7">7 Years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="luxury-interest-rate">Interest Rate</label>
+                            <div class="input-suffix">
+                                <input type="number" id="luxury-interest-rate" value="5.75" min="0.1" max="15" step="0.125">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="luxury-interest-rate-slider" min="0.1" max="10" value="5.75" step="0.125">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="luxury-property-tax">Annual Property Tax</label>
+                            <div class="input-suffix">
+                                <input type="number" id="luxury-property-tax" value="1.5" min="0" max="5" step="0.1">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="luxury-home-insurance">Annual Home Insurance</label>
+                            <div class="input-prefix">
+                                <input type="number" id="luxury-home-insurance" value="6000" min="0" max="20000" step="100">
+                            </div>
+                        </div>
+                        
+                        <button class="calculate-btn" id="luxury-calculate-btn">Calculate Payment</button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-group">
+                            <div class="result-value" id="luxury-monthly-payment">$11,667</div>
+                            <div class="result-label">Monthly Payment</div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="luxury-payment-chart"></canvas>
+                        </div>
+                        
+                        <div class="result-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Principal & Interest</div>
+                                <div class="detail-value" id="luxury-principal-interest">$9,542</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Property Tax</div>
+                                <div class="detail-value" id="luxury-monthly-tax">$1,625</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Home Insurance</div>
+                                <div class="detail-value" id="luxury-monthly-insurance">$500</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Loan Amount</div>
+                                <div class="detail-value" id="luxury-loan-amount">$2,000,000</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Total Interest Paid</div>
+                                <div class="detail-value" id="luxury-total-interest">$1,435,120</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Total Cost</div>
+                                <div class="detail-value" id="luxury-total-cost">$4,200,120</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Ready to Take the Next Step?</h2>
+                <p>Contact us today to discuss your mortgage options and find the perfect financing solution for your dream home.</p>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer style="background-color: #121921; color: white; padding: 60px 0 30px; border-top: 4.5px solid #d4af37;">
+    <div class="container">
+        <div class="footer-content" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 40px;">
+            <!-- Left Column - Reena Dutta -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: left; color: white;">
+                <div style="margin-bottom: 20px;">
+                    <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px; height: auto;">
+                </div>
+                <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color: white;">Reena Dutta</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">REALTOR���</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">DRE# 02194500</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Phone: 805-340-2583</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                <p style="font-size: 16px; margin-bottom: 5px; color: white;">Website: reenaduttarealestate.com</p>
+            </div>
+
+            <!-- Middle Column - Connect With Me -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: center; color: white;">
+                 <h3 style="color: #d4af37; font-size: 20px; margin-bottom: 20px; font-weight: bold;">Connect With Me</h3>
+                 <div style="margin-bottom: 20px;">
+                     <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border: 2px solid #d4af37; border-radius: 4px;">
+                 </div>
+                 <div class="social-icons" style="display: flex; justify-content: center; gap: 15px;">
+                     <a href="https://www.facebook.com/ReenaDuttaRealEstate" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://www.instagram.com/reena.dutta11/" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.tiktok.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-tiktok"></i></a>
+                     <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-linkedin-in"></i></a>
+                     <a href="https://www.youtube.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+                 </div>
+            </div>
+
+            <!-- Right Column - Y Realty -->
+            <div class="footer-column" style="flex: 1; min-width: 250px; margin-bottom: 30px; text-align: left; color: white;">
+                 <div style="margin-bottom: 20px;">
+                     <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px; height: auto;">
+                 </div>
+                 <p style="font-size: 18px; font-weight: bold; margin-bottom: 10px; color: white;">Y Realty Inc.</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">DRE# 02202700</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Phone (office): 877-976-5348</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                 <p style="font-size: 16px; margin-bottom: 5px; color: white;">Website: yrealty.com</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom" style="text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+             <p style="font-size: 18px; margin-bottom: 15px; color: white;">Elevating Life Through Real Estate</p>
+             <p style="font-size: 14px; color: #ccc;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all dropdown containers
+            var dropdowns = document.querySelectorAll('.communities-dropdown-container');
+            
+            // Add event listeners to each dropdown
+            dropdowns.forEach(function(dropdown) {
+                var button = dropdown.querySelector('.communities-dropdown-toggle');
+                var content = dropdown.querySelector('.communities-dropdown');
+                
+                // Toggle dropdown on click (for mobile devices)
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                        button.style.backgroundColor = '#121921';
+                        button.style.color = 'white';
+                    } else {
+                        content.style.display = 'block';
+                        button.style.backgroundColor = '#d4af37';
+                        button.style.color = '#121921';
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        content.style.display = 'none';
+                        button.style.backgroundColor = '#121921';
+                        button.style.color = 'white';
+                    }
+                });
+            });
+
+            // Standard Mortgage Calculator Functionality
+            // Link sliders to input fields
+            const homePriceSlider = document.getElementById('home-price-slider');
+            const homePriceInput = document.getElementById('home-price');
+            const downPaymentSlider = document.getElementById('down-payment-slider');
+            const downPaymentInput = document.getElementById('down-payment');
+            const interestRateSlider = document.getElementById('interest-rate-slider');
+            const interestRateInput = document.getElementById('interest-rate');
+            
+            homePriceSlider.addEventListener('input', function() {
+                homePriceInput.value = this.value;
+                updateCalculation();
+            });
+            
+            homePriceInput.addEventListener('input', function() {
+                homePriceSlider.value = this.value;
+                updateCalculation();
+            });
+            
+            downPaymentSlider.addEventListener('input', function() {
+                downPaymentInput.value = this.value;
+                updateCalculation();
+            });
+            
+            downPaymentInput.addEventListener('input', function() {
+                downPaymentSlider.value = this.value;
+                updateCalculation();
+            });
+            
+            interestRateSlider.addEventListener('input', function() {
+                interestRateInput.value = this.value;
+                updateCalculation();
+            });
+            
+            interestRateInput.addEventListener('input', function() {
+                interestRateSlider.value = this.value;
+                updateCalculation();
+            });
+            
+            document.getElementById('calculate-btn').addEventListener('click', updateCalculation);
+            document.getElementById('loan-term').addEventListener('change', updateCalculation);
+            document.getElementById('property-tax').addEventListener('input', updateCalculation);
+            document.getElementById('home-insurance').addEventListener('input', updateCalculation);
+            
+            // Luxury Mortgage Calculator Functionality
+            const luxuryHomePriceSlider = document.getElementById('luxury-home-price-slider');
+            const luxuryHomePriceInput = document.getElementById('luxury-home-price');
+            const luxuryDownPaymentSlider = document.getElementById('luxury-down-payment-slider');
+            const luxuryDownPaymentInput = document.getElementById('luxury-down-payment');
+            const luxuryInterestRateSlider = document.getElementById('luxury-interest-rate-slider');
+            const luxuryInterestRateInput = document.getElementById('luxury-interest-rate');
+            
+            luxuryHomePriceSlider.addEventListener('input', function() {
+                luxuryHomePriceInput.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            luxuryHomePriceInput.addEventListener('input', function() {
+                luxuryHomePriceSlider.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            luxuryDownPaymentSlider.addEventListener('input', function() {
+                luxuryDownPaymentInput.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            luxuryDownPaymentInput.addEventListener('input', function() {
+                luxuryDownPaymentSlider.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            luxuryInterestRateSlider.addEventListener('input', function() {
+                luxuryInterestRateInput.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            luxuryInterestRateInput.addEventListener('input', function() {
+                luxuryInterestRateSlider.value = this.value;
+                updateLuxuryCalculation();
+            });
+            
+            document.getElementById('luxury-calculate-btn').addEventListener('click', updateLuxuryCalculation);
+            document.getElementById('luxury-loan-term').addEventListener('change', updateLuxuryCalculation);
+            document.getElementById('luxury-property-tax').addEventListener('input', updateLuxuryCalculation);
+            document.getElementById('luxury-home-insurance').addEventListener('input', updateLuxuryCalculation);
+            
+            // Initialize charts
+            let paymentChart;
+            let luxuryPaymentChart;
+            
+            function updateCalculation() {
+                const homePrice = parseFloat(homePriceInput.value);
+                const downPayment = parseFloat(downPaymentInput.value);
+                const loanTerm = parseInt(document.getElementById('loan-term').value);
+                const interestRate = parseFloat(interestRateInput.value) / 100;
+                const propertyTaxRate = parseFloat(document.getElementById('property-tax').value) / 100;
+                const annualInsurance = parseFloat(document.getElementById('home-insurance').value);
+                
+                const loanAmount = homePrice - downPayment;
+                const monthlyInterestRate = interestRate / 12;
+                const numberOfPayments = loanTerm * 12;
+                
+                // Calculate monthly principal and interest
+                const monthlyPI = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+                
+                // Calculate monthly property tax
+                const monthlyPropertyTax = (homePrice * propertyTaxRate) / 12;
+                
+                // Calculate monthly insurance
+                const monthlyInsurance = annualInsurance / 12;
+                
+                // Calculate total monthly payment
+                const totalMonthlyPayment = monthlyPI + monthlyPropertyTax + monthlyInsurance;
+                
+                // Calculate total interest paid
+                const totalInterestPaid = (monthlyPI * numberOfPayments) - loanAmount;
+                
+                // Calculate total cost
+                const totalCost = totalInterestPaid + homePrice;
+                
+                // Update results
+                document.getElementById('monthly-payment').textContent = '$' + totalMonthlyPayment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('principal-interest').textContent = '$' + monthlyPI.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('monthly-tax').textContent = '$' + monthlyPropertyTax.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('monthly-insurance').textContent = '$' + monthlyInsurance.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('loan-amount').textContent = '$' + loanAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('total-interest').textContent = '$' + totalInterestPaid.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('total-cost').textContent = '$' + totalCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                
+                // Update chart
+                updatePaymentChart(monthlyPI, monthlyPropertyTax, monthlyInsurance);
+            }
+            
+            function updateLuxuryCalculation() {
+                const homePrice = parseFloat(luxuryHomePriceInput.value);
+                const downPayment = parseFloat(luxuryDownPaymentInput.value);
+                const loanTerm = parseInt(document.getElementById('luxury-loan-term').value);
+                const interestRate = parseFloat(luxuryInterestRateInput.value) / 100;
+                const propertyTaxRate = parseFloat(document.getElementById('luxury-property-tax').value) / 100;
+                const annualInsurance = parseFloat(document.getElementById('luxury-home-insurance').value);
+                
+                const loanAmount = homePrice - downPayment;
+                const monthlyInterestRate = interestRate / 12;
+                const numberOfPayments = loanTerm * 12;
+                
+                // Calculate monthly principal and interest
+                const monthlyPI = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+                
+                // Calculate monthly property tax
+                const monthlyPropertyTax = (homePrice * propertyTaxRate) / 12;
+                
+                // Calculate monthly insurance
+                const monthlyInsurance = annualInsurance / 12;
+                
+                // Calculate total monthly payment
+                const totalMonthlyPayment = monthlyPI + monthlyPropertyTax + monthlyInsurance;
+                
+                // Calculate total interest paid
+                const totalInterestPaid = (monthlyPI * numberOfPayments) - loanAmount;
+                
+                // Calculate total cost
+                const totalCost = totalInterestPaid + homePrice;
+                
+                // Update results
+                document.getElementById('luxury-monthly-payment').textContent = '$' + totalMonthlyPayment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-principal-interest').textContent = '$' + monthlyPI.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-monthly-tax').textContent = '$' + monthlyPropertyTax.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-monthly-insurance').textContent = '$' + monthlyInsurance.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-loan-amount').textContent = '$' + loanAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-total-interest').textContent = '$' + totalInterestPaid.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('luxury-total-cost').textContent = '$' + totalCost.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                
+                // Update chart
+                updateLuxuryPaymentChart(monthlyPI, monthlyPropertyTax, monthlyInsurance);
+            }
+            
+            function updatePaymentChart(principalInterest, propertyTax, insurance) {
+                const ctx = document.getElementById('payment-chart').getContext('2d');
+                
+                if (paymentChart) {
+                    paymentChart.destroy();
+                }
+                
+                paymentChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Principal & Interest', 'Property Tax', 'Insurance'],
+                        datasets: [{
+                            data: [principalInterest, propertyTax, insurance],
+                            backgroundColor: ['#d4af37', '#121921', '#6c757d'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        family: "'Open Sans', sans-serif",
+                                        size: 14
+                                    },
+                                    color: '#333'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            function updateLuxuryPaymentChart(principalInterest, propertyTax, insurance) {
+                const ctx = document.getElementById('luxury-payment-chart').getContext('2d');
+                
+                if (luxuryPaymentChart) {
+                    luxuryPaymentChart.destroy();
+                }
+                
+                luxuryPaymentChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Principal & Interest', 'Property Tax', 'Insurance'],
+                        datasets: [{
+                            data: [principalInterest, propertyTax, insurance],
+                            backgroundColor: ['#d4af37', '#34495e', '#6c757d'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        family: "'Open Sans', sans-serif",
+                                        size: 14
+                                    },
+                                    color: '#f5f5f5'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            // Initialize calculations and charts
+            updateCalculation();
+            updateLuxuryCalculation();
+        });
+    </script>
+</body>
+</html>

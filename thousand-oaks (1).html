@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Thousand Oaks - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation - New Style Based on Screenshot */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+        
+        /* New Navigation Style */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+        }
+        
+        .nav-button {
+            padding: 15px 20px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid #d4af37;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+            min-width: 150px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-button:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        .nav-button.active {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* City Banner Styles */
+        .city-banner {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        .city-banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .city-banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4) ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .city-banner-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* City Navigation Styles */
+        .city-navigation {
+            background-color: #f5f5f5;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .city-nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .city-nav-item a {
+            display: block;
+            padding: 8px 15px;
+            color: #333;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 3px;
+        }
+        
+        .city-nav-item a:hover {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        .city-nav-item a.active {
+            background-color: #d4af37;
+            color: white;
+        }
+        
+        /* Section Styles */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 20px;
+        }
+        
+        /* Area Overview Section */
+        .area-overview {
+            background-color: #f9f9f9;
+        }
+        
+        .area-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            font-size: 20px;
+            align-items: center;
+        }
+        
+        .area-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .area-image img {
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Neighborhoods Section */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .neighborhood-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .neighborhood-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .neighborhood-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .neighborhood-card:hover .neighborhood-image img {
+            transform: scale(1.1);
+        }
+        
+        .neighborhood-content {
+            padding: 20px;
+        }
+        
+        .neighborhood-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #121921;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        /* Real Estate Market Section */
+        .market-section {
+            background-color: #f9f9f9;
+        }
+        
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: #666;
+        }
+        
+        /* Resources Section */
+        .resources-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .resources-list li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .resources-list li:before {
+            content: '\f105';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+        }
+        
+        .resources-list a {
+            color: #121921;
+            transition: color 0.3s;
+        }
+        
+        .resources-list a:hover {
+            color: #d4af37;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+            border-top: 4.5px solid #d4af37;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .city-banner-title {
+                font-size: 48px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .section-subtitle {
+                font-size: 22px;
+            }
+            
+            .stat-value {
+                font-size: 30px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 50px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 32px; }
+        }
+        
+        @media (max-width: 768px) {
+            .city-banner-title {
+                font-size: 36px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .section-subtitle {
+                font-size: 20px;
+            }
+            
+            .nav-row {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-button {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+        }
+        
+        @media (max-width: 576px) {
+            .city-banner {
+                height: 250px;
+            }
+            
+            .city-banner-title {
+                font-size: 30px;
+            }
+            
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .market-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <div class="nav-buttons">
+                <div class="nav-row">
+                    <a href="index.html" class="nav-button">HOME</a>
+                    <a href="#" class="nav-button">COMMUNITIES</a>
+                    <a href="#" class="nav-button">MARKET TRENDS</a>
+                    <a href="#" class="nav-button">MORTGAGE CALCULATOR</a>
+                    <a href="some-areas-of-expertise.html" class="nav-button">SOME AREAS OF EXPERTISE</a>
+                    <a href="#" class="nav-button">HOMES WE SPECIALIZE IN</a>
+                </div>
+                <div class="nav-row">
+                    <a href="about-us.html" class="nav-button">ABOUT US</a>
+                    <a href="free-home-evaluation.html" class="nav-button">FREE HOME EVALUATION</a>
+                    <a href="#" class="nav-button">MLS SEARCH</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- City Banner -->
+    <section class="city-banner">
+        <img src="images/thousand_oaks_neighborhood.jpeg" alt="Thousand Oaks">
+        <div class="city-banner-overlay">
+            <h1 class="city-banner-title">Thousand Oaks</h1>
+        </div>
+    </section>
+    
+    <!-- City Navigation -->
+    <section class="city-navigation">
+        <div class="container">
+            <div class="city-nav-container">
+                <div class="city-nav-item"><a href="#overview" class="active">Overview</a></div>
+                <div class="city-nav-item"><a href="#neighborhoods">Neighborhoods</a></div>
+                <div class="city-nav-item"><a href="#market">Real Estate Market</a></div>
+                <div class="city-nav-item"><a href="#schools">Schools</a></div>
+                <div class="city-nav-item"><a href="#resources">Local Resources</a></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Area Overview Section -->
+    <section id="overview" class="section area-overview">
+        <div class="container">
+            <h2 class="section-title">Thousand Oaks Overview</h2>
+            <div class="area-content">
+                <div class="area-text">
+                    <p>Thousand Oaks is a premier city in the Conejo Valley, known for its scenic beauty, master-planned communities, and exceptional quality of life. Consistently ranked among the safest cities in America, Thousand Oaks offers a perfect blend of suburban comfort and natural splendor.</p>
+                    <p>The city derives its name from the abundance of oak trees that dot the landscape, creating a picturesque setting against the backdrop of the Santa Monica Mountains. With over 15,000 acres of publicly owned open space, residents enjoy access to numerous parks, hiking trails, and recreational areas.</p>
+                    <p>Thousand Oaks is home to thriving business districts, cultural venues like the Civic Arts Plaza, and excellent educational institutions. The city's commitment to controlled growth and environmental preservation has maintained its charming character while providing modern amenities and services.</p>
+                </div>
+                <div class="area-image">
+                    <img src="images/thousand_oaks_neighborhood.png" alt="Thousand Oaks Overview">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Neighborhoods Section -->
+    <section id="neighborhoods" class="section">
+        <div class="container">
+            <h2 class="section-title">Thousand Oaks Neighborhoods</h2>
+            <p>Thousand Oaks features a diverse range of neighborhoods, each with its own distinct character and appeal. From established communities to newer developments, the city offers housing options to suit various preferences and lifestyles.</p>
+            
+            <div class="neighborhoods-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/lynn-ranch-home.png" alt="Lynn Ranch">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Lynn Ranch</h3>
+                        <p>Spacious Estates and Timeless Charm
+Lynn Ranch offers a unique blend of rural charm and upscale living, with large custom homes on expansive lots, equestrian properties, and mature tree-lined streets. Known for its peaceful atmosphere, strong community feel, and proximity to top schools and outdoor recreation, Lynn Ranch is ideal for those seeking privacy, space, and classic California living—all within minutes of the heart of Thousand Oaks.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/wildwood.png" alt="Wildwood">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Wildwood</h3>
+                        <p>Tucked against the scenic backdrop of Wildwood Regional Park, the Wildwood neighborhood offers a peaceful, family-friendly lifestyle surrounded by hiking trails, open space, and breathtaking views. Known for its strong sense of community, top-rated schools, and charming suburban streets, Wildwood is perfect for those who crave outdoor adventure with the convenience of nearby shopping, dining, and freeway access.
+
+</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/lang-ranch.png" alt="Lang Ranch">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Lang Ranch</h3>
+                        <p>A family-friendly neighborhood with well-maintained homes, excellent schools, and abundant recreational opportunities. Popular with families for its community amenities and parks.Nestled in the rolling hills with access to parks, hiking trails, and open space, Lang Ranch offers a perfect blend of luxury, nature, and family-friendly living—all just minutes from shopping, dining, and major commuter routes.</p>
+                    </div>
+                </div>
+                
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/thousnd-oaks-dos-vientos.png" alt="Dos Vientos">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Dos Vientos</h3>
+                        <p>Dos Vientos Ranch is a highly sought-after master-planned community located in the southwestern part of Newbury Park, within the city of Thousand Oaks, California. Surrounded by the scenic beauty of the Santa Monica Mountains, this upscale neighborhood offers a peaceful, suburban lifestyle with a mix of Mediterranean and Spanish-style homes built between the late 1990s and early 2010s. Residents are drawn to Dos Vientos for its spacious single-family homes, townhomes, and estates, many of which feature modern amenities and larger lots.
+
+The community is known for its strong sense of safety and family-friendly atmosphere, making it a popular choice for families, professionals, and retirees alike. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Real Estate Market Section -->
+    <section id="market" class="section market-section">
+        <div class="container">
+            <h2 class="section-title">Thousand Oaks Real Estate Market</h2>
+            <p>The Thousand Oaks real estate market is characterized by strong property values, desirable neighborhoods, and a diverse range of housing options. The city's excellent schools, safety record, and high quality of life continue to attract buyers from across Southern California and beyond.</p>
+            
+            <div class="market-stats">
+                <div class="stat-card">
+                    <div class="stat-value">$1.2M+</div>
+                    <div class="stat-label">Median Home Price</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">$600+</div>
+                    <div class="stat-label">Price Per Sq Ft</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">22</div>
+                    <div class="stat-label">Avg Days on Market</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">List to Sale Price</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px;">
+                <h3 class="section-subtitle">Market Trends</h3>
+                <p>The Thousand Oaks real estate market has shown consistent appreciation over the years, with limited inventory and high demand keeping property values strong. The city's geographic constraints and strict development regulations help maintain the exclusivity and desirability of its neighborhoods.</p>
+                <p>Luxury properties in areas like North Ranch and Westlake Hills command premium prices, while established neighborhoods offer more accessible options for families. The market for condominiums and townhomes remains active, particularly near commercial centers and transportation corridors.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Schools Section -->
+    <section id="schools" class="section">
+        <div class="container">
+            <h2 class="section-title">Thousand Oaks Schools</h2>
+            <p>Thousand Oaks is served by the highly-rated Conejo Valley Unified School District, known for its academic excellence and comprehensive programs. The area also offers several prestigious private school options and is home to California Lutheran University.</p>
+            
+            <div style="margin-top: 30px;">
+                <h3 class="section-subtitle">Public Schools</h3>
+                <ul class="resources-list">
+                    <li><strong>Westlake High School</strong> - Consistently ranked among the top high schools in California</li>
+                    <li><strong>Thousand Oaks High School</strong> - Known for strong academic and athletic programs</li>
+                    <li><strong>Redwood Middle School</strong> - Award-winning middle school with diverse program offerings</li>
+                    <li><strong>Conejo Elementary School</strong> - Elementary school with strong parent involvement</li>
+                </ul>
+                
+                <h3 class="section-subtitle" style="margin-top: 30px;">Private Schools</h3>
+                <ul class="resources-list">
+                    <li><strong>Oaks Christian School</strong> - College preparatory school serving grades 5-12</li>
+                    <li><strong>La Reina High School & Middle School</strong> - Catholic college preparatory school for girls</li>
+                    <li><strong>Ascension Lutheran School</strong> - Private school offering education from preschool through 8th grade</li>
+                </ul>
+                
+                <h3 class="section-subtitle" style="margin-top: 30px;">Higher Education</h3>
+                <ul class="resources-list">
+                    <li><strong>California Lutheran University</strong> - Private university offering undergraduate and graduate programs</li>
+                    <li><strong>Moorpark College</strong> - Community college located nearby in Moorpark</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Local Resources Section -->
+    <section id="resources" class="section">
+        <div class="container">
+            <h2 class="section-title">Thousand Oaks Resources</h2>
+            <p>Thousand Oaks offers numerous resources and amenities that contribute to its exceptional quality of life. From shopping and dining to recreation and cultural attractions, residents have access to a wide range of activities and services.</p>
+            
+            <div style="margin-top: 30px;">
+                <h3 class="section-subtitle">Recreation & Outdoors</h3>
+                <ul class="resources-list">
+                    <li><a href="https://www.crpd.org/" target="_blank">Conejo Recreation & Park District</a> - Network of parks, recreational facilities, and programs</li>
+                    <li><a href="https://www.nps.gov/samo/" target="_blank">Santa Monica Mountains National Recreation Area</a> - Extensive trail system and natural areas</li>
+                    <li><a href="https://www.crpd.org/parks/gardens-of-the-world/" target="_blank">Gardens of the World</a> - Beautiful botanical garden showcasing different international garden styles</li>
+                    <li><a href="https://www.conejovalleyguide.com/dosomethingblog/paradise-falls-at-wildwood-park-in-thousand-oaks" target="_blank">Wildwood Regional Park</a> - Popular park featuring Paradise Falls and miles of hiking trails</li>
+                </ul>
+                
+                <h3 class="section-subtitle" style="margin-top: 30px;">Arts & Culture</h3>
+                <ul class="resources-list">
+                    <li><a href="https://www.civicartsplaza.com/" target="_blank">Thousand Oaks Civic Arts Plaza</a> - Premier performing arts venue featuring Broadway shows, concerts, and cultural events</li>
+                    <li><a href="https://www.californiamuseum.org/" target="_blank">California Museum of Art Thousand Oaks</a> - Contemporary art museum showcasing regional and national artists</li>
+                    <li><a href="https://www.thousandoakslibrary.org/" target="_blank">Thousand Oaks Library</a> - Modern library system with extensive collections and community programs</li>
+                </ul>
+                
+                <h3 class="section-subtitle" style="margin-top: 30px;">Shopping & Dining</h3>
+                <ul class="resources-list">
+                    <li><a href="https://www.theoaksmall.com/" target="_blank">The Oaks Shopping Center</a> - Major shopping mall featuring department stores and specialty retailers</li>
+                    <li><a href="https://shoptheprom.com/" target="_blank">The Promenade at Westlake</a> - Upscale outdoor shopping center with boutiques and restaurants</li>
+                    <li><a href="https://www.janss.com/" target="_blank">Janss Marketplace</a> - Shopping center with diverse retail options and entertainment venues</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="border-top: 4.5px solid #d4af37;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; margin-bottom: 20px;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <p style="font-size: 20px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; color: white;">REALTOR</p>
+                        <p style="text-align: left; margin-bottom: 8px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; color: white;">Email: reena@reenarealestate.com</p>
+                    </div>
+                </div>
+                
+               <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 18px; text-align: center; margin-bottom: 15px; font-weight: bold;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border-radius: 50%;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                        <ul class="main-menu-items">
+  <li class="main-menu-item"><a href="index.html" class="main-menu-link">Home</a></li>
+  <li class="main-menu-item"><a href="about.html" class="main-menu-link">About</a></li>
+  <!-- Other menu items -->
+  <li class="main-menu-item communities-dropdown-container">
+    <button class="communities-dropdown-toggle">Communities</button>
+    <div class="communities-dropdown">
+      <a href="community1.html">Community 1</a>
+      <!-- ... -->
+    </div>
+  </li>
+  <!-- ... more items ... -->
+</ul>
+
+                    </div>
+                </div>
+                
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: right;">
+                    <div style="text-align: right; margin-bottom: 20px;">
+                        <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <p style="text-align: right; margin-bottom: 8px; color: white;">Y Realty</p>
+                    <p style="text-align: right; margin-bottom: 8px; color: white;">2659 Townsgate Rd, Suite 130</p>
+                    <p style="text-align: right; margin-bottom: 8px; color: white;">Westlake Village, CA 91361</p>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
