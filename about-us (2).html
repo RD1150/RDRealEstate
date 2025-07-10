@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>About Me - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling with improved alignment */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 0 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            height: 54px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+            line-height: 1;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .main-menu-link.active {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling with improved alignment */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 0 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            height: 54px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            line-height: 1;
+            vertical-align: middle;
+            box-sizing: border-box;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+            top: 54px;
+            width: 100%;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Hero section styling */
+        .hero {
+            background-image: url('images/Home.png');
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            font-family: 'PT Serif', serif;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero-content p {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        /* About Me section styling with improved horizontal centering */
+        .about-me-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Values section styling */
+        .values-section {
+            padding: 80px 0;
+        }
+
+        .values-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .values-heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .values-heading h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #121921;
+        }
+
+        .values-heading p {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-icon {
+            font-size: 48px;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .value-item h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #121921;
+        }
+
+        /* Client Testimonials Section */
+        .client-testimonials-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+            margin: 40px 0;
+        }
+
+        .client-testimonials-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .client-testimonials-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .client-testimonials-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: #121921;
+            margin-bottom: 15px;
+        }
+
+        .client-testimonials-header p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .client-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .client-testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            width: 100%;
+            box-sizing: border-box;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-client-testimonial {
+            grid-column: span 2;
+        }
+
+        .client-testimonial-quote {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .client-testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+
+        .client-author-info {
+            flex: 1;
+        }
+
+        .client-author-name {
+            font-size: 20px;
+            font-weight: 600;
+            color: #121921;
+            margin-bottom: 5px;
+        }
+
+        .client-author-location {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .client-testimonial-rating {
+            color: #d4af37;
+            font-size: 18px;
+        }
+
+        /* CTA section styling */
+        .cta-section {
+            padding: 80px 0;
+            background-image: linear-gradient(rgba(18, 25, 33, 0.8), rgba(18, 25, 33, 0.8)), url('images/cta-background.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-content h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .cta-content p {
+            margin-bottom: 30px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #121921;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            height: 70px;
+        }
+
+        /* Social media icons styling */
+        .about-me-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .about-me-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #d4af37;
+            border-radius: 50%;
+            color: #121921;
+            transition: all 0.3s ease;
+        }
+
+        .about-me-social a:hover {
+            background-color: #121921;
+            color: #fff;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 0 15px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .values-grid, .client-testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .featured-client-testimonial {
+                grid-column: span 1;
+            }
+            
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            .hero-content h1 {
+                font-size: 40px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+<nav class="main-menu">
+    <ul class="main-menu-items">
+        <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container">
+                <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                <div class="communities-dropdown">
+                    <a href="conejo-valley.html">CONEJO VALLEY</a>
+                    <a href="agoura-hills.html">AGOURA HILLS</a>
+                    <a href="calabasas.html">CALABASAS</a>
+                    <a href="camarillo.html">CAMARILLO</a>
+                    <a href="malibu.html">MALIBU</a>
+                    <a href="moorpark.html">MOORPARK</a>
+                    <a href="simi-valley.html">SIMI VALLEY</a>
+                    <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                    <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                    <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                    <a href="oxnard.html">OXNARD</a>
+                    <a href="ventura.html">VENTURA</a>
+                </div>
+            </div>
+        </li>
+        <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+        <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+        <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+        <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+        <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+        <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+        <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+        <!-- New Resources Dropdown -->
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container"> <!-- Reusing dropdown styles for consistency -->
+                <button class="communities-dropdown-toggle">RESOURCES</button>
+                <div class="communities-dropdown">
+                    <a href="buyer-guides.html">BUYER GUIDES</a>
+                    <a href="seller-guides.html">SELLER GUIDES</a>
+                    <a href="relocation-guide.html">RELOCATION GUIDE</a>
+                    <a href="service-providers.html">SERVICE PROVIDERS</a>
+                </div>
+            </div>
+        </li>
+        <!-- End New Resources Dropdown -->
+        <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+        <li class="main-menu-item"><a href="contact.html" class="main-menu-link">Contact Us</a></li>
+    </ul>
+</nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>About Me</h1>
+            <p>Learn More About My Approach to Real Estate</p>
+        </div>
+    </section>
+
+    <!-- About Me Section with Horizontally Centered Layout and Vertically Adjusted Photo -->
+    <section class="about-me-section">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: flex-start; justify-content: center; max-width: 1200px; margin: 0 auto;">
+                <!-- Left Column - Photo with vertical adjustment -->
+                <div style="flex: 0 0 40%; max-width: 40%; padding-right: 40px; box-sizing: border-box; padding-top: 50px;">
+                    <img src="images/reena-headshot.jpg" alt="Reena Dutta" style="width: 100%; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <!-- Right Column - Text -->
+                <div style="flex: 0 0 60%; max-width: 60%; box-sizing: border-box;">
+                    <h2>Reena Dutta</h2>
+                    <p class="position" style="font-size: 22px; color: #d4af37; margin-bottom: 25px;">Owner</p>
+                    <p>My experience in Southern California real estate allows me to bring unparalleled market knowledge and negotiation skills to every transaction. My journey in real estate began with a passion for helping people find their perfect homes and has evolved into a commitment to providing exceptional service to clients throughout Ventura and Los Angeles Counties.</p>
+                    
+                    <p>I founded Reena Dutta Real Estate with a simple yet powerful mission: to elevate the real estate experience for every client I serve. What sets me apart is my personalized approach. I believe that real estate is not just about properties—it's about people and their dreams. Whether you're a first-time homebuyer, a seasoned investor, or selling a beloved family home, I take the time to understand your unique needs and goals.</p>
+                    
+                    <p>My deep roots in the community give me insider knowledge of neighborhoods, market trends, and hidden opportunities that you won't find elsewhere. I combine this local expertise with cutting-edge technology and marketing strategies to ensure my clients always have the competitive edge.</p>
+                    
+                    <p>I'm committed to providing a level of service that goes beyond the transaction. My goal is to build lasting relationships with my clients, serving as a trusted advisor for all their real estate needs for years to come.</p>
+                    
+                    <div class="about-me-social">
+                        <a href="https://www.facebook.com/reenaduttarealestate" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reenaduttarealestate" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/reenadutta" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@reenaduttarealestate" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/channel/reenaduttarealestate" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="values-container">
+            <div class="values-heading">
+                <h2>My Core Values</h2>
+                <p>These principles guide everything I do and define my approach to real estate</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>I believe in honest communication and transparent processes. My clients always know exactly where they stand and what to expect next.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Dedication</h3>
+                    <p>I'm committed to going above and beyond for my clients, providing personalized attention and being available whenever they need me.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>I leverage the latest technology and marketing strategies to ensure my clients' properties receive maximum exposure and optimal results.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community</h3>
+                    <p>I'm deeply connected to the communities I serve and committed to making a positive impact through my business and personal involvement.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Expertise</h3>
+                    <p>I continuously invest in my knowledge and skills to provide my clients with the most informed guidance and strategic advice.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Results</h3>
+                    <p>I am driven by achieving tangible outcomes for my clients, whether it's maximizing sale price, finding the perfect home, or building long-term wealth through real estate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="client-testimonials-section">
+        <div class="client-testimonials-container">
+            <div class="client-testimonials-header">
+                <h2>What My Clients Say</h2>
+                <p>Hear from the people who have trusted me with their real estate journey</p>
+            </div>
+            <div class="client-testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="client-testimonial-card">
+                    <p class="client-testimonial-quote">"She was the BEST! So helpful, incredibly reliable, and always there when I wanted to tour a home. Reena is truly the best—definitely recommend!"</p>
+                    <div class="client-testimonial-author">
+                        <div class="client-author-info">
+                            <p class="client-author-name">— Jackie F.</p>
+                            <p class="client-author-location">Westlake Village, CA</p>
+                            <div class="client-testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="client-testimonial-card">
+                    <p class="client-testimonial-quote">"Reena found us the perfect home. We needed a one-story and wanted more privacy in Thousand Oaks. She nailed it! We are thrilled with our new home. Thank you, Reena!!"</p>
+                    <div class="client-testimonial-author">
+                        <div class="client-author-info">
+                            <p class="client-author-name">— Subha D.</p>
+                            <p class="client-author-location">Thousand Oaks, CA</p>
+                            <div class="client-testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="client-testimonial-card">
+                    <p class="client-testimonial-quote">“We found the home of our dreams! Reena helped us from start to finish with the purchase of our new home. We are so happy here!”</p>
+                    <div class="client-testimonial-author">
+                        <div class="client-author-info">
+                            <p class="client-author-name">- S.S.</p>
+                            <p class="client-author-location">Thousand Oaks, CA</p>
+                            <div class="client-testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 4 -->
+                <div class="client-testimonial-card">
+                    <p class="client-testimonial-quote">"Reena helped us all the way—from clearing out clutter, organizing a garage sale, arranging service providers, and even helping us pack! She went above and beyond. Most importantly, she sold our home for well above asking price. We feel so lucky to have had Reena’s knowledge, expertise, and incredible negotiating skills on our side!"</p>
+                    <div class="client-testimonial-author">
+                        <div class="client-author-info">
+                            <p class="client-author-name">S.S.</p>
+                            <p class="client-author-location">Thousand Oaks, CA</p>
+                            <div class="client-testimonial-rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Ready to Work With Me?</h2>
+                <p>Whether you're looking to buy, sell, or invest in real estate, I'm here to help you achieve your goals. Contact me today to schedule a consultation.</p>
+                <a href="contact.html" class="btn">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer with corrected content -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #121921; padding: 60px 0 20px; color: white;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">REALTOR®</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 23px; text-align: center; margin-bottom: 15px; font-weight: bold; color: #d4af37;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border: 1px solid #d4af37;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        
+
+                        <a href="https://www.facebook.com/reenaduttarealestate" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reena.dutta11" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+                        <a href="https://www.youtube.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p>Elevating Life Through Real Estate</p>
+            </div>
+            <div class="footer-review-link" style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <p style="color: white; font-size: 16px;">Enjoyed working with me? <a href="https://g.page/r/CZQjEU6Ak-2UEAE/review" target="_blank" style="color: #d4af37; text-decoration: underline;">Leave a review on Google!</a></p>
+            </div>
+            <div class="copyright" style="text-align: center;">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

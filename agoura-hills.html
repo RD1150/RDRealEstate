@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Agoura Hills, California - Luxury Real Estate | Reena Dutta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background-image: url('images/agoura-hills-about.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #d4af37;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #c4a030;
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .feature-box {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* UPDATED: Increased height from 200px to 350px for larger photos */
+        .feature-image {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .feature-content p {
+            color: #666;
+        }
+        
+        /* Neighborhoods Section */
+        .neighborhoods-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .neighborhood-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        /* UPDATED: Increased height from 200px to 350px for larger photos */
+        .neighborhood-image {
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .neighborhood-content {
+            padding: 25px;
+        }
+        
+        .neighborhood-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+        
+        .neighborhood-content p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .neighborhood-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+        
+        /* Market Section */
+        .market-section {
+            padding: 80px 0;
+        }
+        
+        .market-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .market-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .market-chart {
+            flex: 1;
+            min-width: 300px;
+            height: 300px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background-color: #121921;
+            color: white;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #d4af37;
+        }
+        
+        .cta-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        
+        /* Footer Styling Based on Screenshot */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .footer-left, .footer-center, .footer-right {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .footer-left img, .footer-right img {
+            max-width: 150px;
+            margin-bottom: 20px;
+            height: auto;
+        }
+        
+        .footer-left p, .footer-right p {
+            margin: 5px 0;
+            color: white;
+            font-size: 16px;
+        }
+        
+        .footer-center h3 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .footer-center img {
+            max-width: 150px;
+            border: 1px solid #d4af37;
+            margin-bottom: 15px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #d4af37;
+            color: #121921;
+            border-radius: 50%;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background-color: white;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: white;
+            font-size: 14px;
+        }
+        
+        .footer-tagline {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 16px;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content, .market-content {
+                flex-direction: column;
+            }
+            
+            .about-text, .market-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-left, .footer-center, .footer-right {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            body {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+                <ul class="main-menu-items">
+                    <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+                    <li class="main-menu-item">
+                        <div class="communities-dropdown-container">
+                            <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                            <div class="communities-dropdown">
+                                <a href="conejo-valley.html">CONEJO VALLEY</a>
+                                <a href="agoura-hills.html">AGOURA HILLS</a>
+                                <a href="calabasas.html">CALABASAS</a>
+                                <a href="camarillo.html">CAMARILLO</a>
+                                <a href="malibu.html">MALIBU</a>
+                                <a href="moorpark.html">MOORPARK</a>
+                                <a href="simi-valley.html">SIMI VALLEY</a>
+                                <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                                <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                                <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                                <a href="oxnard.html">OXNARD</a>
+                                <a href="ventura.html">VENTURA</a>
+                            </div>
+                        </div>
+                    </li>
+                 <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+                    <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+                    <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+                    <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+                    <li class="main-menu-item"><a href="idx.html" class="main-menu-link">MLS SEARCH</a></li>
+                    <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+                    <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+                    <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+                    <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+                    <li class="main-menu-item"><a href="contact.html" class="main-menu-link">CONTACT</a></li>
+                   
+                   
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Agoura Hills</h1>
+            <p>Discover luxury living in the foothills of the Santa Monica Mountains</p>
+            <a href="#" class="cta-button">Explore Agoura Hills</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Agoura Hills</h2>
+                <p>A charming community with a perfect blend of suburban comfort and natural beauty</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Nestled in the foothills of the Santa Monica Mountains, Agoura Hills is a picturesque community known for its stunning natural landscapes, excellent schools, and high quality of life. With a perfect blend of suburban comfort and natural beauty, Agoura Hills offers residents a peaceful retreat while maintaining convenient access to the greater Los Angeles area.</p>
+                    <p>Originally settled by the Chumash Indians, the area was later part of the Rancho Las Virgenes land grant. The city was incorporated in 1982 and has since developed into a thriving community that values its natural surroundings and small-town charm.</p>
+                    <p>Today, Agoura Hills is home to approximately 20,000 residents who enjoy the city's excellent amenities, outdoor recreation opportunities, and strong sense of community. The area is particularly known for its excellent public schools, making it a popular choice for families.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/agoura_hills_aerial.png" alt="Agoura Hills Community">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Makes Agoura Hills Special</h2>
+                <p>Discover the unique features that make this community a desirable place to call home</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/agoura-nature.png" alt="Natural Beauty" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Natural Beauty</h3>
+                        <p>Surrounded by the Santa Monica Mountains National Recreation Area, Agoura Hills offers residents unparalleled access to hiking trails, nature preserves, and outdoor activities. The city is committed to preserving its natural environment, with numerous parks and open spaces.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/agoura-schools.png" alt="Excellent Schools" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Excellent Schools</h3>
+                        <p>Agoura Hills is served by the highly-rated Las Virgenes Unified School District, which consistently ranks among the top districts in California. The area's excellent public and private schools make it a top choice for families prioritizing education.</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-image">
+                        <img src="images/pagoura-lifestyle.png" alt="Vibrant Lifestyle" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Vibrant Lifestyle</h3>
+                        <p>Residents enjoy a diverse range of dining, shopping, and entertainment options. The city hosts community events throughout the year, including the popular Reyes Adobe Days festival, farmers markets, and outdoor concerts, fostering a strong sense of community.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods Section -->
+    <section class="neighborhoods-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Agoura Hills Neighborhoods</h2>
+                <p>Explore the distinct neighborhoods that make up this diverse community</p>
+            </div>
+            <div class="neighborhoods-grid">
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/morrison-ranch.jpg" alt="Morrison Ranch" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Morrison Ranch</h3>
+                        <p>An established neighborhood known for its spacious lots, mature landscaping, and custom homes. Many properties in Morrison Ranch offer stunning mountain views and a peaceful, rural atmosphere while still being close to amenities.</p>
+                        <div class="neighborhood-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">$1.5M+</div>
+                                <div class="stat-label">Avg. Price</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">3,000+</div>
+                                <div class="stat-label">Avg. Sq Ft</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1970s</div>
+                                <div class="stat-label">Established</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/agoura-hills-about.png" alt="Old Agoura" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Old Agoura</h3>
+                        <p>A unique equestrian community with a rural feel, featuring large lots, horse trails, and a mix of ranch-style homes and custom estates. Old Agoura maintains a country atmosphere with its equestrian zoning and oak-studded landscapes.</p>
+                        <div class="neighborhood-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">$1.7M+</div>
+                                <div class="stat-label">Avg. Price</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2,500+</div>
+                                <div class="stat-label">Avg. Sq Ft</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1960s</div>
+                                <div class="stat-label">Established</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/lake-lindero2.png" alt="Lake Lindero" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Lake Lindero</h3>
+                        <p>Built around a small lake and golf course, this neighborhood offers a mix of single-family homes and townhouses. Residents enjoy access to the Lake Lindero Country Club, tennis courts, and community pool.</p>
+                        <div class="neighborhood-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">$1.1M+</div>
+                                <div class="stat-label">Avg. Price</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">2,000+</div>
+                                <div class="stat-label">Avg. Sq Ft</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1970s</div>
+                                <div class="stat-label">Established</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neighborhood-card">
+                    <div class="neighborhood-image">
+                        <img src="images/forest-cove-aerial.jpeg" alt="Morrison Estates" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="neighborhood-content">
+                        <h3>Forest Cove</h3>
+                        <p>Forest Cove has suburban-style subdivisions in Agoura Hills, a Conejo Valley city known as the gateway to the Santa Monica Mountains. Views of Ladyface Mountain are to the south. Thousand Oaks is about 4 miles west, and Downtown Los Angeles is about 36 miles east. "But Agoura Hills is in LA County, not Ventura County: the line goes right through the middle of our area," says Michael Rice, a real estate agent with Re/Max One. It's significant because there are separate sheriff's departments, different school districts and a higher sales tax rate for Agoura Hills.</p>
+                        <div class="neighborhood-stats">
+                            <div class="stat-item">
+                                <div class="stat-value">$2M+</div>
+                                <div class="stat-label">Avg. Price</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">4,000+</div>
+                                <div class="stat-label">Avg. Sq Ft</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">1980s</div>
+                                <div class="stat-label">Established</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Section -->
+    <section class="market-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Agoura Hills Real Estate Market</h2>
+                <p>Current trends and insights into the local housing market</p>
+            </div>
+            <div class="market-content">
+                <div class="market-text">
+                    <p>The Agoura Hills real estate market remains strong, with steady appreciation and high demand for homes in this desirable community. The median home price in Agoura Hills is approximately $1.2 million, with luxury properties in premier neighborhoods commanding significantly higher prices.</p>
+                    <p>Properties in Agoura Hills typically sell for around $550 per square foot, with homes staying on the market for an average of 32 days. The list-to-sale price ratio is approximately 98.2%, indicating a competitive market where sellers often receive close to their asking price.</p>
+                    <p>The market is particularly strong for single-family homes with updated features, outdoor living spaces, and views. Homes in top school districts and those with larger lots continue to be in high demand, often receiving multiple offers.</p>
+                    <p>For the most current market information and personalized advice for buying or selling in Agoura Hills, please contact me for a detailed analysis tailored to your specific needs.</p>
+                </div>
+                <div class="market-chart">
+                    <img src="images/placeholder-agoura-market-trends.jpg " alt="Agoura Hills Market Trends">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Find Your Dream Home in Agoura Hills?</h2>
+                <p>Whether you're looking to buy, sell, or invest in Agoura Hills real estate, I'm here to help you navigate the market with expert guidance and personalized service. Let's work together to achieve your real estate goals.</p>
+                <a href="contact.html" class="cta-button">Contact Me Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Based on Screenshot -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <!-- Left Column - Reena Dutta Logo and Info -->
+                <div class="footer-left">
+                    <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 150px; height: auto;">
+                    <p>Reena Dutta</p>
+                    <p>REALTOR®</p>
+                    <p>DRE# 02194500</p>
+                    <p>Phone: 805-340-2583</p>
+                    <p>Email: reena@reenaduttarealestate.com</p>
+                    <p>Website: reenaduttarealestate.com</p>
+                    <p>Elevating Life Through Real Estate</p>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-center">
+                    <h3>Connect With Me</h3>
+                    <img src="images/reena-headshot.jpg" alt="Reena Dutta">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+  <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+    <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+  </div>
+</a>
+
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty Info -->
+                <div class="footer-right">
+                    <img src="images/y-realty-logo.png" alt="Y Realty Inc." style="max-width: 150px; height: auto;">
+                    <p>Y Realty Inc.</p>
+                    <p>DRE# 02202700</p>
+                    <p>Phone (office): 877-976-5348</p>
+                    <p>Address: 5280 2nd Street Long Beach, CA 90803</p>
+                    <p>Website: yrealty.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>© 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

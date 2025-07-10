@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kestrel.idxhome.com/ihf-kestrel.js"></script>
+<script>
+	window.ihfKestrel = window.ihfKestrel || {};
+	ihfKestrel.config = {
+		platform: "custom",
+		activationToken: "49F9503B-0D1E-C6DB-C307ECAA25D1691A",
+	};
+</script>
+    <title>Blog - Reena Dutta Real Estate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&family=Playfair+Display:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Brand Header Styling */
+        .brand-header {
+            background-color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #d4af37;
+        }
+        
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            margin: 0;
+            color: #121921;
+        }
+        
+        .brand-tagline {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            color: #d4af37;
+            margin-top: 5px;
+        }
+
+        /* Base styling */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            color: #333;
+        }
+
+        h1 { font-size: 60px; }
+        h2 { font-size: 50px; }
+        h3 { font-size: 40px; }
+
+        .script-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+            color: #333;
+        }
+
+        /* Navigation menu styling */
+        .main-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .main-menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .main-menu-item {
+            margin: 5px;
+        }
+        
+        .main-menu-link {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            display: inline-block;
+            border: 2px solid #d4af37;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            text-align: center;
+            background-color: #121921;
+            transition: all 0.3s ease;
+        }
+        
+        .main-menu-link:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        /* Dropdown Menu Styling */
+        .communities-dropdown-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .communities-dropdown-toggle {
+            background-color: #121921;
+            color: white;
+            padding: 15px 20px;
+            border: 2px solid #d4af37;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            min-width: 150px;
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #121921;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 10;
+            border: 2px solid #d4af37;
+        }
+
+        .communities-dropdown a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-transform: uppercase;
+            text-align: left;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .communities-dropdown a:hover {
+            background-color: #d4af37;
+            color: #121921;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown {
+            display: block;
+        }
+
+        .communities-dropdown-container:hover .communities-dropdown-toggle {
+            background-color: #d4af37;
+            color: #121921;
+        }
+        
+        /* Hero section styling */
+        .hero {
+            background-image: url('images/B0BF5364-0C3B-4690-8EAB-B86EF16F2504.png') !important;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 70px;
+            font-family: 'PT Serif', serif;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .hero-content .realtor-title,
+        .hero-content .credentials,
+        .hero-content .association,
+        .hero-content .tagline {
+            color: white;
+        }
+
+        .hero-content .tagline {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d4af37;
+        }
+
+        /* About section styling */
+        .about-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .about-image {
+            flex: 0 0 300px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .about-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Communities grid styling */
+        .communities-section {
+            padding: 60px 0;
+        }
+
+        .section-title, .featured-communities-title {
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .communities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .community-item {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .community-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .community-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .community-name {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Featured property section */
+        .featured-property-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .featured-property-image img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .featured-property-description {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .featured-property-description h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        /* Dream home section */
+        .dream-home {
+            height: 400px;
+            background-image: url('images/B0BF5364-0C3B-4690-8EAB-B86EF16F2504.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .dream-home::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+        .dream-home-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .dream-home-content h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .dream-home-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        /* Button styling */
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #121921;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b8982f;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #121921;
+            padding: 20px 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .logo img {
+            max-width: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #121921;
+            padding: 60px 0 20px;
+            color: white;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo, .footer-contact, .footer-social {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #ffcc33;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #d4af37;
+        }
+
+        .footer-contact p, .footer-logo p, .footer-bottom p {
+            color: #f5f5f5;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: #d4af37;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #2a2a2a;
+        }
+        
+        .footer-brokerage {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .communities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content h1 {
+                font-size: 50px;
+            }
+            .about-content {
+                flex-direction: column;
+            }
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                min-width: 120px;
+                padding: 12px 15px;
+            }
+            body {
+                font-size: 22px;
+            }
+            h1 { font-size: 50px; }
+            h2 { font-size: 40px; }
+            h3 { font-size: 32px; }
+        }
+
+        @media (max-width: 768px) {
+            .main-menu-items {
+                flex-direction: column;
+                align-items: center;
+            }
+            .main-menu-item {
+                width: 100%;
+                max-width: 300px;
+                margin: 5px 0;
+            }
+            .main-menu-link, 
+            .communities-dropdown-toggle {
+                width: 100%;
+                min-width: auto;
+            }
+            .hero-content h1 {
+                font-size: 40px;
+            }
+            body {
+                font-size: 20px;
+            }
+            h1 { font-size: 40px; }
+            h2 { font-size: 34px; }
+            h3 { font-size: 28px; }
+        }
+
+        @media (max-width: 576px) {
+            .communities-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            body {
+                font-size: 18px;
+            }
+            h1 { font-size: 36px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <h1 class="brand-name">Reena Dutta Real Estate</h1>
+        <div class="brand-tagline">Elevating Life Through Real Estate</div>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html"><img src="images/rd-logo-updated.png" alt="Reena Dutta Real Estate"></a>
+            </div>
+            <nav class="main-menu">
+    <ul class="main-menu-items">
+        <li class="main-menu-item"><a href="index.html" class="main-menu-link">HOME</a></li>
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container">
+                <button class="communities-dropdown-toggle">COMMUNITIES</button>
+                <div class="communities-dropdown">
+                    <a href="conejo-valley.html">CONEJO VALLEY</a>
+                    <a href="agoura-hills.html">AGOURA HILLS</a>
+                    <a href="calabasas.html">CALABASAS</a>
+                    <a href="camarillo.html">CAMARILLO</a>
+                    <a href="malibu.html">MALIBU</a>
+                    <a href="moorpark.html">MOORPARK</a>
+                    <a href="simi-valley.html">SIMI VALLEY</a>
+                    <a href="thousand-oaks.html">THOUSAND OAKS</a>
+                    <a href="westlake-village.html">WESTLAKE VILLAGE</a>
+                    <a href="san-fernando-valley.html">SAN FERNANDO VALLEY</a>
+                    <a href="oxnard.html">OXNARD</a>
+                    <a href="ventura.html">VENTURA</a>
+                </div>
+            </div>
+        </li>
+        <li class="main-menu-item"><a href="some-areas-of-expertise.html" class="main-menu-link">SOME AREAS OF EXPERTISE</a></li>
+        <li class="main-menu-item"><a href="homes-we-specialize.html" class="main-menu-link">HOMES WE SPECIALIZE IN</a></li>
+        <li class="main-menu-item"><a href="about-us.html" class="main-menu-link">ABOUT US</a></li>
+        <li class="main-menu-item"><a href="free-home-evaluation.html" class="main-menu-link">FREE HOME EVALUATION</a></li>
+        <li class="main-menu-item"><a href="mls-search.html" class="main-menu-link">MLS SEARCH</a></li>
+        <li class="main-menu-item"><a href="market-trends.html" class="main-menu-link">MARKET TRENDS</a></li>
+        <li class="main-menu-item"><a href="listings.html" class="main-menu-link">LISTINGS</a></li>
+        <!-- New Resources Dropdown -->
+        <li class="main-menu-item">
+            <div class="communities-dropdown-container"> <!-- Reusing dropdown styles for consistency -->
+                <button class="communities-dropdown-toggle">RESOURCES</button>
+                <div class="communities-dropdown">
+                    <a href="buyer-guides.html">BUYER GUIDES</a>
+                    <a href="seller-guides.html">SELLER GUIDES</a>
+                    <a href="relocation-guide.html">RELOCATION GUIDE</a>
+                    <a href="service-providers.html">SERVICE PROVIDERS</a>
+                </div>
+            </div>
+        </li>
+        <!-- End New Resources Dropdown -->
+        <li class="main-menu-item"><a href="mortgage-calculator.html" class="main-menu-link">MORTGAGE CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="investment-calculator.html" class="main-menu-link">INVESTMENT CALCULATOR</a></li>
+        <li class="main-menu-item"><a href="blog.html" class="main-menu-link">BLOG</a></li>
+        <li class="main-menu-item"><a href="contact.html" class="main-menu-link">Contact Us</a></li>
+    </ul>
+</nav>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Real Estate Blog</h1>
+            <p>Insights, tips, and market updates from Reena Dutta Real Estate</p>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+        <div class="blog-container">
+            <div class="blog-main">
+                <article class="blog-post">
+                    <div class="post-header">
+                        <h2 class="post-title">The Latest Market Trends in Southern California Real Estate</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 15, 2025</span>
+                            <span><i class="far fa-user"></i> Reena Dutta</span>
+                            <span><i class="far fa-folder"></i> Market Updates</span>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <img src="images/blog-hero.jpg" alt="Southern California Real Estate Market">
+                    </div>
+                    <div class="post-excerpt">
+                        <p>The Southern California real estate market continues to evolve in 2025, with several key trends emerging that buyers and sellers should be aware of. From shifting interest rates to changing buyer preferences, understanding these trends is crucial for making informed real estate decisions.</p>
+                        <p>In this comprehensive analysis, we'll explore the latest data on home prices, inventory levels, and buyer demographics across Los Angeles, Ventura, and Orange counties. We'll also discuss how these trends are specifically impacting luxury markets in communities like Calabasas, Westlake Village, and Agoura Hills.</p>
+                    </div>
+                    <a href="blog-post-1.html" class="read-more">Read More</a>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-header">
+                        <h2 class="post-title">5 Home Staging Tips That Will Help Sell Your Property Faster</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 8, 2025</span>
+                            <span><i class="far fa-user"></i> Reena Dutta</span>
+                            <span><i class="far fa-folder"></i> Selling Tips</span>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <img src="images/blog-post-2.jpg" alt="Home Staging">
+                    </div>
+                    <div class="post-excerpt">
+                        <p>When it comes to selling your home, first impressions matter. Effective staging can not only help your property sell faster but can also potentially increase its value. In today's competitive real estate market, staging has become an essential part of the selling process.</p>
+                        <p>In this article, we'll share five professional staging tips that can transform your home's appeal to potential buyers. From decluttering and depersonalizing to strategic furniture arrangement and lighting, these techniques will help showcase your property's best features and create an emotional connection with buyers.</p>
+                    </div>
+                    <a href="blog-post-2.html" class="read-more">Read More</a>
+                </article>
+                
+                <article class="blog-post">
+                    <div class="post-header">
+                        <h2 class="post-title">Understanding the Luxury Real Estate Market in Calabasas</h2>
+                        <div class="post-meta">
+                            <span><i class="far fa-calendar-alt"></i> April 1, 2025</span>
+                            <span><i class="far fa-user"></i> Reena Dutta</span>
+                            <span><i class="far fa-folder"></i> Luxury Real Estate</span>
+                        </div>
+                    </div>
+                    <div class="post-image">
+                        <img src="images/blog-post-3.jpg" alt="Luxury Home in Calabasas">
+                    </div>
+                    <div class="post-excerpt">
+                        <p>Calabasas has long been synonymous with luxury living in Southern California. Known for its gated communities, celebrity residents, and stunning hillside estates, this exclusive enclave continues to be one of the most sought-after locations for luxury homebuyers.</p>
+                        <p>In this deep dive into the Calabasas luxury market, we'll explore current pricing trends, popular neighborhoods, and the unique features that define luxury properties in this area. We'll also discuss what today's high-end buyers are looking for and how these preferences have evolved in recent years.</p>
+                    </div>
+                    <a href="blog-post-3.html" class="read-more">Read More</a>
+                </article>
+                
+                <div class="pagination">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">Next</a>
+                </div>
+            </div>
+            
+            <div class="blog-sidebar">
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Search</h3>
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search...">
+                        <button type="submit" class="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Categories</h3>
+                    <ul class="categories-list">
+                        <li><a href="#">Market Updates (8)</a></li>
+                        <li><a href="#">Buying Tips (12)</a></li>
+                        <li><a href="#">Selling Tips (10)</a></li>
+                        <li><a href="#">Luxury Real Estate (6)</a></li>
+                        <li><a href="#">Home Improvement (9)</a></li>
+                        <li><a href="#">Local Community (7)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Recent Posts</h3>
+                    <ul class="recent-posts-list">
+                        <li><a href="#">The Latest Market Trends in Southern California Real Estate</a></li>
+                        <li><a href="#">5 Home Staging Tips That Will Help Sell Your Property Faster</a></li>
+                        <li><a href="#">Understanding the Luxury Real Estate Market in Calabasas</a></li>
+                        <li><a href="#">How to Navigate the Mortgage Process in 2025</a></li>
+                        <li><a href="#">Top 10 Features Luxury Homebuyers Are Looking For</a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">Tags</h3>
+                    <div class="tag-cloud">
+                        <a href="#" class="tag">Real Estate</a>
+                        <a href="#" class="tag">Market Trends</a>
+                        <a href="#" class="tag">Luxury Homes</a>
+                        <a href="#" class="tag">Calabasas</a>
+                        <a href="#" class="tag">Agoura Hills</a>
+                        <a href="#" class="tag">Westlake Village</a>
+                        <a href="#" class="tag">Buying Tips</a>
+                        <a href="#" class="tag">Selling Tips</a>
+                        <a href="#" class="tag">Home Staging</a>
+                        <a href="#" class="tag">Investment</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Trends Dashboard -->
+    <section class="market-trends-section">
+        <div class="container">
+            <div class="market-trends-container">
+                <div class="market-trends-header">
+                    <h2>Real Estate Market Trends Dashboard</h2>
+                    <p>Stay informed with the latest market data and trends for Southern California. Our dashboard provides up-to-date statistics to help you make informed real estate decisions.</p>
+                </div>
+                
+                <!-- Filter Controls -->
+                <div class="market-filter-controls">
+                    <div class="filter-group">
+                        <label for="property-type">Property Type</label>
+                        <select id="property-type">
+                            <option value="all">All Properties</option>
+                            <option value="single-family" selected>Single Family</option>
+                            <option value="condo">Condo/Townhouse</option>
+                            <option value="multi-family">Multi-Family</option>
+                            <option value="land">Land</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <select id="location">
+                            <option value="all">All Areas</option>
+                            <option value="calabasas">Calabasas</option>
+                            <option value="agoura-hills">Agoura Hills</option>
+                            <option value="thousand-oaks" selected>Thousand Oaks</option>
+                            <option value="westlake">Westlake Village</option>
+                            <option value="simi-valley">Simi Valley</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="time-period">Time Period</label>
+                        <select id="time-period">
+                            <option value="1-month">Last Month</option>
+                            <option value="3-months" selected>Last 3 Months</option>
+                            <option value="6-months">Last 6 Months</option>
+                            <option value="1-year">Last Year</option>
+                            <option value="5-years">Last 5 Years</option>
+                        </select>
+                    </div>
+                    
+                    <button class="update-btn" id="update-dashboard">Update Dashboard</button>
+                </div>
+                
+                <!-- Stats Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">$1.35M</div>
+                        <div class="stat-label">Median Sale Price</div>
+                        <div class="stat-change positive">+4.8% <i class="fas fa-arrow-up"></i></div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">28</div>
+                        <div class="stat-label">Avg. Days on Market</div>
+                        <div class="stat-change negative">+6 days <i class="fas fa-arrow-up"></i></div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">98.5%</div>
+                        <div class="stat-label">List to Sale Price</div>
+                        <div class="stat-change negative">-1.2% <i class="fas fa-arrow-down"></i></div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-value">142</div>
+                        <div class="stat-label">Active Listings</div>
+                        <div class="stat-change positive">+15% <i class="fas fa-arrow-up"></i></div>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Grid -->
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Median Sale Price Trends</h3>
+                        <div class="chart-container">
+                            <canvas id="price-chart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Inventory Levels</h3>
+                        <div class="chart-container">
+                            <canvas id="inventory-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mortgage Calculator -->
+    <section class="mortgage-calculator-section">
+        <div class="container">
+            <div class="mortgage-calculator-container">
+                <div class="mortgage-calculator-header">
+                    <h2>Mortgage Payment Calculator</h2>
+                    <p>Estimate your monthly mortgage payments and see a complete breakdown of your costs.</p>
+                </div>
+                
+                <div class="calculator-layout">
+                    <div class="calculator-inputs">
+                        <div class="input-group">
+                            <label for="home-price">Home Price</label>
+                            <div class="input-prefix">
+                                <input type="number" id="home-price" value="1350000" min="50000" max="10000000" step="10000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="home-price-slider" min="50000" max="3000000" value="1350000" step="10000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="down-payment">Down Payment</label>
+                            <div class="input-prefix">
+                                <input type="number" id="down-payment" value="270000" min="0" max="10000000" step="5000">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="down-payment-slider" min="0" max="1000000" value="270000" step="5000">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="loan-term">Loan Term</label>
+                            <select id="loan-term">
+                                <option value="30">30 Years</option>
+                                <option value="20">20 Years</option>
+                                <option value="15">15 Years</option>
+                                <option value="10">10 Years</option>
+                            </select>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="interest-rate">Interest Rate</label>
+                            <div class="input-suffix">
+                                <input type="number" id="interest-rate" value="6.5" min="0.1" max="15" step="0.125">
+                            </div>
+                            <div class="slider-container">
+                                <input type="range" class="slider" id="interest-rate-slider" min="0.1" max="10" value="6.5" step="0.125">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="property-tax">Annual Property Tax</label>
+                            <div class="input-suffix">
+                                <input type="number" id="property-tax" value="1.2" min="0" max="5" step="0.1">
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="home-insurance">Annual Home Insurance</label>
+                            <div class="input-prefix">
+                                <input type="number" id="home-insurance" value="4200" min="0" max="10000" step="100">
+                            </div>
+                        </div>
+                        
+                        <button class="calculate-btn" id="calculate-btn">Calculate Payment</button>
+                    </div>
+                    
+                    <div class="calculator-results">
+                        <div class="result-group">
+                            <div class="result-value" id="monthly-payment">$6,825</div>
+                            <div class="result-label">Monthly Payment</div>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <canvas id="payment-chart"></canvas>
+                        </div>
+                        
+                        <div class="result-details">
+                            <div class="detail-row">
+                                <div class="detail-label">Principal & Interest</div>
+                                <div class="detail-value" id="principal-interest">$5,458</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Property Tax</div>
+                                <div class="detail-value" id="monthly-tax">$1,350</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Home Insurance</div>
+                                <div class="detail-value" id="monthly-insurance">$350</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Loan Amount</div>
+                                <div class="detail-value" id="loan-amount">$1,080,000</div>
+                            </div>
+                            
+                            <div class="detail-row">
+                                <div class="detail-label">Total Interest Paid</div>
+                                <div class="detail-value" id="total-interest">$884,952</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tours Section -->
+    <section class="virtual-tours-section">
+        <div class="container">
+            <div class="virtual-tours-container">
+                <div class="virtual-tours-header">
+                    <h2>Featured Virtual Property Tours</h2>
+                    <p>Explore our featured properties from the comfort of your home with immersive 3D virtual tours and video walkthroughs.</p>
+                </div>
+                
+                <div class="tours-grid">
+                    <!-- Featured Tour -->
+                    <div class="tour-card featured-tour">
+                        <div class="tour-image">
+                            <img src="images/featured-property.jpg" alt="Luxury Estate in Calabasas">
+                            <div class="tour-overlay">
+                                <button class="tour-btn" onclick="openTourModal('featured-tour')">View 3D Tour</button>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Luxury Estate in Calabasas</h3>
+                            <p class="tour-address">123 Mountain View Dr, Calabasas, CA 91302</p>
+                            <div class="tour-details">
+                                <div class="tour-detail">
+                                    <i class="fas fa-bed"></i> 5 Beds
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-bath"></i> 6 Baths
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-ruler-combined"></i> 6,500 Sq Ft
+                                </div>
+                            </div>
+                            <div class="tour-price">$4,950,000</div>
+                            <p class="tour-description">Stunning Mediterranean estate with panoramic mountain views, resort-style pool, and gourmet kitchen. Located in the prestigious gated community of The Oaks.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Regular Tours -->
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="images/property-1.jpg" alt="Modern Architectural Home">
+                            <div class="tour-overlay">
+                                <button class="tour-btn" onclick="openTourModal('modern-home')">View 3D Tour</button>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Modern Architectural Home</h3>
+                            <p class="tour-address">456 Canyon View Ln, Agoura Hills, CA 91301</p>
+                            <div class="tour-details">
+                                <div class="tour-detail">
+                                    <i class="fas fa-bed"></i> 4 Beds
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-bath"></i> 4.5 Baths
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-ruler-combined"></i> 4,200 Sq Ft
+                                </div>
+                            </div>
+                            <div class="tour-price">$3,250,000</div>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="images/property-2.jpg" alt="Elegant Family Home">
+                            <div class="tour-overlay">
+                                <button class="tour-btn" onclick="openTourModal('family-home')">View 3D Tour</button>
+                            </div>
+                        </div>
+                        <div class="tour-content">
+                            <h3 class="tour-title">Elegant Family Home</h3>
+                            <p class="tour-address">789 Oak Ridge Dr, Thousand Oaks, CA 91360</p>
+                            <div class="tour-details">
+                                <div class="tour-detail">
+                                    <i class="fas fa-bed"></i> 5 Beds
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-bath"></i> 4 Baths
+                                </div>
+                                <div class="tour-detail">
+                                    <i class="fas fa-ruler-combined"></i> 3,800 Sq Ft
+                                </div>
+                            </div>
+                            <div class="tour-price">$2,795,000</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Testimonials Section -->
+    <section class="client-testimonials-section">
+        <div class="container">
+            <div class="client-testimonials-container">
+                <div class="client-testimonials-header">
+                    <h2>What Our Clients Say</h2>
+                    <p>Hear from homeowners who have experienced the Reena Dutta Real Estate difference</p>
+                </div>
+                
+                <div class="client-testimonials-grid">
+                    <!-- Featured Testimonial -->
+                    <div class="client-testimonial-card featured-client-testimonial">
+                        <div class="client-testimonial-quote">
+                            Reena's expertise and dedication made our home buying process seamless and enjoyable. Her knowledge of the local market is unmatched, and she went above and beyond to find us our dream home. We couldn't be happier with our experience and highly recommend Reena to anyone looking to buy or sell in the area.
+                        </div>
+                        <div class="client-testimonial-author">
+                            <div class="client-author-image">
+                                <img src="images/testimonial-1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="client-author-info">
+                                <div class="client-author-name">Sarah & Michael Johnson</div>
+                                <div class="client-author-location">Calabasas, CA</div>
+                                <div class="client-testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Regular Testimonials -->
+                    <div class="client-testimonial-card">
+                        <div class="client-testimonial-quote">
+                            As first-time home buyers, we were nervous about the process, but Reena guided us every step of the way. Her patience, attention to detail, and negotiation skills helped us secure our home under asking price in a competitive market.
+                        </div>
+                        <div class="client-testimonial-author">
+                            <div class="client-author-image">
+                                <img src="images/testimonial-2.jpg" alt="David Chen">
+                            </div>
+                            <div class="client-author-info">
+                                <div class="client-author-name">David & Emily Chen</div>
+                                <div class="client-author-location">Thousand Oaks, CA</div>
+                                <div class="client-testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="client-testimonial-card">
+                        <div class="client-testimonial-quote">
+                            Selling our family home of 25 years was emotional, but Reena's compassionate approach made it so much easier. Her marketing strategy and staging advice resulted in multiple offers within the first week, and we sold well above asking price.
+                        </div>
+                        <div class="client-testimonial-author">
+                            <div class="client-author-image">
+                                <img src="images/testimonial-3.jpg" alt="Patricia Rodriguez">
+                            </div>
+                            <div class="client-author-info">
+                                <div class="client-author-name">Patricia Rodriguez</div>
+                                <div class="client-author-location">Agoura Hills, CA</div>
+                                <div class="client-testimonial-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-container">
+                <div class="newsletter-header">
+                    <h2>Stay Updated on Real Estate News</h2>
+                    <p>Subscribe to our newsletter to receive the latest market updates, new listings, and real estate tips.</p>
+                </div>
+                
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="Your Email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input type="tel" id="phone" placeholder="Your Phone Number">
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="market-updates">
+                        <label for="market-updates">I'm interested in market updates</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="new-listings">
+                        <label for="new-listings">Notify me of new listings</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="selling-tips">
+                        <label for="selling-tips">Send me home selling tips and advice</label>
+                    </div>
+                    
+                    <button type="button" class="newsletter-btn">Subscribe Now</button>
+                    
+                    <div class="newsletter-footer">
+                        <p>We respect your privacy. You can unsubscribe at any time.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="border-top: 4.5px solid #d4af37; background-color: #121921; padding: 60px 0 20px; color: white;">
+        <div class="container">
+            <div class="footer-content" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <!-- Left Column - Reena Dutta -->
+                <div class="footer-logo" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/rd-logo-footer.png" alt="Reena Dutta Real Estate Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Reena Dutta</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">REALTORè¢Ó</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02194500</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone: 805-340-2583</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Email: reena@reenaduttarealestate.com</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: reenaduttarealestate.com</p>
+                    </div>
+                </div>
+                
+                <!-- Middle Column - Connect With Me -->
+                <div class="footer-social" style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; margin: 0 auto; padding: 0 20px;">
+                    <p style="font-size: 23px; text-align: center; margin-bottom: 15px; font-weight: bold; color: #d4af37;">Connect With Me</p>
+                    <div style="text-align: center; margin-bottom: 15px;">
+                        <img src="images/reena_dutta_footer_headshot.png" alt="Reena Dutta" style="max-width: 150px; border: 1px solid #d4af37;">
+                    </div>
+                    <div class="social-icons" style="display: flex; gap: 15px; justify-content: center;">
+                        <a href="https://www.facebook.com/reenaduttarealestate" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/reena.dutta11" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.linkedin.com/in/reena-dutta-b8238519" target="_blank">
+                          <div style="background-color: #D4AF37; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 10px;">
+                            <i class="fab fa-linkedin-in" style="color: #1E2022; font-size: 20px;"></i>
+                          </div>
+                        </a>
+                        <a href="https://www.youtube.com/@reenadutta1111" target="_blank" style="display: inline-block; width: 40px; height: 40px; background-color: #d4af37; color: #121921; border-radius: 50%; text-align: center; line-height: 40px;"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Y Realty -->
+                <div class="footer-contact" style="flex: 1; text-align: left;">
+                    <div style="text-align: left; height: 120px; display: flex; align-items: center;">
+                        <img src="images/y-realty-logo.png" alt="Y Realty Logo" style="max-width: 120px;">
+                    </div>
+                    <div style="padding-top: 20px;">
+                        <p style="font-size: 22px; margin-bottom: 12px; text-align: left; color: white;">Y Realty Inc.</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">DRE# 02202700</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Phone (office): 877-976-5348</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Address: 5280 2nd Street Long Beach, CA 90803</p>
+                        <p style="text-align: left; margin-bottom: 8px; font-size: 18px; color: white;">Website: yrealty.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p style="color: white;">Elevating Life Through Real Estate</p>
+            </div>
+            <div class="footer-review-link" style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #333;">
+                <p style="color: white; font-size: 16px;">Enjoyed working with me? <a href="https://g.page/r/CZQjEU6Ak-2UEAE/review" target="_blank" style="color: #d4af37; text-decoration: underline;">Leave a review on Google!</a></p>
+            </div>
+            <div class="copyright" style="text-align: center;">
+                <p style="color: white;">&copy; 2025 Reena Dutta Real Estate. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all dropdown containers
+            var dropdowns = document.querySelectorAll('.communities-dropdown-container');
+            
+            // Add event listeners to each dropdown
+            dropdowns.forEach(function(dropdown) {
+                var button = dropdown.querySelector('.communities-dropdown-toggle');
+                var content = dropdown.querySelector('.communities-dropdown');
+                
+                // Toggle dropdown on click (for mobile devices)
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        content.style.display = 'block';
+                    }
+                });
+                
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!dropdown.contains(e.target)) {
+                        content.style.display = 'none';
+                    }
+                });
+            });
+
+            // Initialize charts for Market Trends Dashboard
+            if (typeof Chart !== 'undefined') {
+                // Price Chart
+                var priceCtx = document.getElementById('price-chart');
+                if (priceCtx) {
+                    var priceChart = new Chart(priceCtx, {
+                        type: 'line',
+                        data: {
+                            labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+                            datasets: [{
+                                label: 'Median Sale Price',
+                                data: [1280000, 1310000, 1325000, 1340000, 1360000, 1350000],
+                                borderColor: '#d4af37',
+                                backgroundColor: 'rgba(212, 175, 55, 0.1)',
+                                borderWidth: 2,
+                                fill: true,
+                                tension: 0.4
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: false,
+                                    ticks: {
+                                        callback: function(value) {
+                                            return '$' + value.toLocaleString();
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Inventory Chart
+                var inventoryCtx = document.getElementById('inventory-chart');
+                if (inventoryCtx) {
+                    var inventoryChart = new Chart(inventoryCtx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
+                            datasets: [{
+                                label: 'Active Listings',
+                                data: [110, 118, 125, 132, 138, 142],
+                                backgroundColor: '#d4af37',
+                                borderWidth: 0
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    display: false
+                                }
+                            }
+                        }
+                    });
+                }
+
+                // Payment Chart
+                var paymentCtx = document.getElementById('payment-chart');
+                if (paymentCtx) {
+                    var paymentChart = new Chart(paymentCtx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Principal & Interest', 'Property Tax', 'Insurance'],
+                            datasets: [{
+                                data: [5458, 1350, 350],
+                                backgroundColor: ['#d4af37', '#121921', '#6c757d']
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: {
+                                    position: 'bottom'
+                                }
+                            }
+                        }
+                    });
+                }
+            }
+
+            // Mortgage Calculator Functionality
+            const homePriceInput = document.getElementById('home-price');
+            const homePriceSlider = document.getElementById('home-price-slider');
+            const downPaymentInput = document.getElementById('down-payment');
+            const downPaymentSlider = document.getElementById('down-payment-slider');
+            const interestRateInput = document.getElementById('interest-rate');
+            const interestRateSlider = document.getElementById('interest-rate-slider');
+            const calculateBtn = document.getElementById('calculate-btn');
+
+            // Sync inputs and sliders
+            if (homePriceInput && homePriceSlider) {
+                homePriceInput.addEventListener('input', function() {
+                    homePriceSlider.value = this.value;
+                });
+                homePriceSlider.addEventListener('input', function() {
+                    homePriceInput.value = this.value;
+                });
+            }
+
+            if (downPaymentInput && downPaymentSlider) {
+                downPaymentInput.addEventListener('input', function() {
+                    downPaymentSlider.value = this.value;
+                });
+                downPaymentSlider.addEventListener('input', function() {
+                    downPaymentInput.value = this.value;
+                });
+            }
+
+            if (interestRateInput && interestRateSlider) {
+                interestRateInput.addEventListener('input', function() {
+                    interestRateSlider.value = this.value;
+                });
+                interestRateSlider.addEventListener('input', function() {
+                    interestRateInput.value = this.value;
+                });
+            }
+
+            // Calculate mortgage payment
+            if (calculateBtn) {
+                calculateBtn.addEventListener('click', function() {
+                    // Get values
+                    const homePrice = parseFloat(homePriceInput.value);
+                    const downPayment = parseFloat(downPaymentInput.value);
+                    const loanTerm = parseInt(document.getElementById('loan-term').value);
+                    const interestRate = parseFloat(interestRateInput.value);
+                    const propertyTax = parseFloat(document.getElementById('property-tax').value);
+                    const homeInsurance = parseFloat(document.getElementById('home-insurance').value);
+
+                    // Calculate loan amount
+                    const loanAmount = homePrice - downPayment;
+                    
+                    // Calculate monthly principal and interest
+                    const monthlyInterestRate = interestRate / 100 / 12;
+                    const numberOfPayments = loanTerm * 12;
+                    const monthlyPI = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments)) / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+                    
+                    // Calculate monthly property tax and insurance
+                    const monthlyPropertyTax = (homePrice * (propertyTax / 100)) / 12;
+                    const monthlyInsurance = homeInsurance / 12;
+                    
+                    // Calculate total monthly payment
+                    const totalMonthlyPayment = monthlyPI + monthlyPropertyTax + monthlyInsurance;
+                    
+                    // Calculate total interest paid
+                    const totalInterestPaid = (monthlyPI * numberOfPayments) - loanAmount;
+                    
+                    // Update results
+                    document.getElementById('monthly-payment').textContent = '$' + totalMonthlyPayment.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    document.getElementById('principal-interest').textContent = '$' + monthlyPI.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    document.getElementById('monthly-tax').textContent = '$' + monthlyPropertyTax.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    document.getElementById('monthly-insurance').textContent = '$' + monthlyInsurance.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    document.getElementById('loan-amount').textContent = '$' + loanAmount.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    document.getElementById('total-interest').textContent = '$' + totalInterestPaid.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                    
+                    // Update chart
+                    if (paymentChart) {
+                        paymentChart.data.datasets[0].data = [monthlyPI, monthlyPropertyTax, monthlyInsurance];
+                        paymentChart.update();
+                    }
+                });
+            }
+        });
+
+        // Virtual Tour Modal Functionality
+        function openTourModal(tourId) {
+            // This would normally open a modal with a 3D tour
+            alert('3D Tour would open here for: ' + tourId);
+        }
+    </script>
+</body>
+</html>
